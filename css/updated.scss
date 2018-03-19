@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1100px) {
+  .big-desktop-view {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 1099px) {
+  .big-mobile-view {
+    display: none !important;
+  }
+}
+.nav-bar-cont {
+  display: flex;
+  justify-content: center;
+  .opaque {
+    border: none;
+    background-color: #000000;
+    color: #39b54a;
+  }
+  a.opaque:hover {
+    color: #c5c5c5;
+  }
+  .nav-bar {
+    position: fixed;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    a {
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
