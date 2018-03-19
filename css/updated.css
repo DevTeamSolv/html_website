@@ -21,4 +21,12 @@
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
 
+.ico-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .ico-buttons a {
+    margin: 10px; }
+
 /*# sourceMappingURL=updated.css.map */
