@@ -33,6 +33,33 @@ Tags: black, green, white, two-columns, fixed-width, threaded-comments, sticky-p
    1. GENERAL SECTION
  ====================== */
 
+
+
+
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+.banner {
+      position:fixed;
+      width: 100px;
+      height: 300px;
+      background-color: mediumaquamarine;
+      top: 300px;
+    }
+}
+
+
+
 * {
     margin: 0;
     padding: 0px;
@@ -146,7 +173,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     font-family: 'Roboto', serif;
     line-height: 140%;
-    color: #01090c;
+    color: #fff;
 }
 h1 {
     font-size: 22px;
@@ -156,6 +183,12 @@ h2 {
 }
 h3 {
     font-size: 18px;
+    
+    
+    
+    
+    
+    
 }
 h4 {
     font-size: 16px;
@@ -169,7 +202,7 @@ h6 {
 .lead {
     font-family: 'Open Sans', Arial,sans-serif !important;
     font-size: 18px;
-    margin: 15px 0;
+    margin: 0px 0;
     padding: 0;
 }
 .first {
@@ -333,13 +366,19 @@ html, body, .wrapper{
 /*
     HEADER SECTION
  */
+
+
+    
+
+
 .header-section{
     display: block;
     width: 100%;
-    padding: 20px 0;
+    padding: 07px 0;
     position: relative;
     transition: all 1s;
     background: #fff;
+    
 }
 header.header-section.fixed {
     position: fixed;
@@ -349,7 +388,7 @@ header.header-section.fixed {
     background: #fff;
     z-index: 99999;
     border-bottom: 1px solid #39b54a;
-    padding: 10px 0;
+    padding: 0px 0;
     transition: all 1s;
 }
 .header-section .navbar{
@@ -359,15 +398,22 @@ header.header-section.fixed {
     border-radius: 0;
     border: none;
     background: transparent !important
+        
+        
+        
 }
 .header-section .navbar .navbar-brand{
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     color: #555252;
+    
+    
+   
 }
 .header-section .navbar .navbar-brand b{
     color: #39b54a;
+    
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
@@ -376,10 +422,13 @@ header.header-section.fixed {
     background: transparent !important;
 }
 
+
+
+
 ul.navbar-nav{
     background: transparent;
-    margin: 0 auto;
-    margin-bottom: -5px;
+    margin: 10px auto;
+    margin-bottom: -15px;
     display: inline-block;
     float: none;
 }
@@ -459,7 +508,7 @@ span.shoping-cart {
  */
 .search-section{
     display: block;
-    background: url(../images/bg.png) #39b54a no-repeat;
+    background: #39b54a;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
@@ -853,6 +902,48 @@ a.carousel-control.right > span{
     text-align: center;
     background-attachment: fixed;
     color: #fff;
+    
+}
+    .offer-section2{
+    display: block;
+    padding: 170px 0 130px;
+    position: relative;
+    width: 100%;
+    background: url(../images/offer-bg2.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+    color: #fff;
+           
+    }
+
+.offer-section2:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5)
+}
+.offer-section2 h1{
+    font-size: 60px;
+    font-family: 'Open Sans';
+    font-weight: 900;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.offer-section2 h2{
+    font-size: 38px;
+    font-weight: 300;
+    color: #000;
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+}
 }
 .offer-section:before{
     content: "";
@@ -939,7 +1030,7 @@ a.carousel-control.right > span{
 .feedback .item .carousel-caption h3{
     font-size: 18px;
     font-weight: 700;
-    color: #39b54a;
+    color: #000;
     text-align: center;
 }
 .feedback .item .carousel-caption span{
@@ -995,7 +1086,7 @@ a.carousel-control.right > span{
  */
 .news-letter-section{
     display: block;
-    background: url(../images/bg.png) #39b54a no-repeat;
+    background-color: #39b54a;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
@@ -1430,6 +1521,24 @@ footer.footer p a{
     .product-hover a:last-child {
         margin: 5px 25%;
         padding: 10px;
+    }
+}
+
+
+
+#mobileshow    { display:block; }
+
+@media screen and (min-width: 700px) {
+    #mobileshow   { display:none; }
+}
+
+
+
+@media (max-width: 700px) 
+{
+    .carousel-caption
+    {
+        display: none;
     }
 }
 

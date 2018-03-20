@@ -7,7 +7,10 @@
 		<title>Street QRed and Gaming - Solution Token</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<script src="assets/js/html5shiv.js">
+
+</script><![endif]-->
+        
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -19,22 +22,29 @@
         
 	</head>
 	<body class="is-loading">
-
+                
 		<!-- Wrapper -->
-			<div id="wrapper">
+      
 
 				<!-- Main -->
                 
-              <a href="../index.html">Back to Website</a>
+      <div class="topnav" id="myTopnav">
+   Solution Token
+  <a href="#home" class="active">Login</a>
+  <a href="#news">Register</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+       
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="images/Gaming-logo-gif.gif" height="150" width="150" alt="logo"/></span>
+							<img src="images/Gaming-logo-gif.gif" height="150" width="150" alt="logo"/>
 							<h1>Street QRed and Gaming</h1>
-							<p>Download our fun games now on iOS and Playstore!</p>
+							<h2>Download our fun games now on iOS and Playstore!</h2>
 						</header>
 						
-						<hr />
-						<h2>Sign up to Beta Test!</h2>
+					
+						<h3>Sign up to Beta Test!</h3>
 						<form method="post" action="#">
 							<div class="field">
 								<input type="text" name="name" id="name" placeholder="Name" />
@@ -57,7 +67,7 @@
 								<li><a href="#" class="button">Sign up for Beta</a></li>
 							</ul>
 						</form>
-						<hr />
+					
 				
 						<footer>
 							<ul class="icons">
@@ -84,6 +94,10 @@
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
+                
+         
+                
+                
 			</script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	</body>
