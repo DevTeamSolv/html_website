@@ -12,31 +12,111 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="../css/updated.css">
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
+		<link rel="stylesheet" href="assets/css/updated.css">
+		<link rel="stylesheet" href="rangeslider.js-2.3.0/rangeslider.css">
+		<!--[if lte IE 8]>&lt;!&ndash;<link rel="stylesheet" href="assets/css/ie8.css" /><![endif]&ndash;&gt;-->
+		<!--[if lte IE 9]>&lt;!&ndash;<link rel="stylesheet" href="assets/css/ie9.css" /><![endif]&ndash;&gt;-->
+        <link rel="stylesheet" type="text/css" href="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/css/bootstrap.min.css">
+
+    </head>
 	<body class="loading">
 		<div id="wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
-			<div id="main">
+			<div id="main-1">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Solution Token ICO</h1>
-						<p>Coming soon</p>
-                        <div class="ico-buttons">
-							<a href="../index.html" class="button" >Register Now</a>
-							<a href="../index.html" class="button" >Back to Website</a>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="http://facebook.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								
-								<li><a href="http://telegram.com" class="icon fa-comment"><span class="label">Telegram</span></a></li>
-							</ul>
-						</nav>
-					</header>
+                <div class="body">
+                    <h1>Solution Token ICO</h1>
+
+                    <div class="countdown countdown-container">
+                        <div class="clock row">
+                            <div class="clock-item clock-days countdown-time-value">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-days" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-days type-time">DAYS</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+
+                            <div class="clock-item clock-hours countdown-time-value">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-hours" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-hours type-time">HOURS</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+
+                            <div class="clock-item clock-minutes countdown-time-value">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-minutes" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-minutes type-time">MINUTES</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+
+                            <div class="clock-item clock-seconds countdown-time-value">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-seconds" class="clock-canvas"></div>
+
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-seconds type-time">SECONDS</p>
+                                        </div><!-- /.text -->
+                                    </div><!-- /.inner -->
+                                </div><!-- /.wrap -->
+                            </div><!-- /.clock-item -->
+                        </div><!-- /.clock -->
+                    </div><!-- /.countdown-wrapper -->
+
+                    <div class="calculator">
+                        <h1>Calculate SOLV Tokens</h1>
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <input type="radio" name="coin" value="btc" checked /> BTC
+                                </div>
+                                <div>
+                                    <input type="radio" name="coin" value="eth" /> ETH
+                                </div>
+                                <div>
+                                    <input type="radio" name="coin" value="nem" /> NEM
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>Enter the Amount you of coin you want to participate with</p>
+                                <input type="number" value="0.5" min="0" id="coin-value" placeholder="Enter Amount"/>
+                                <p class="result">You will get <span id="solvToken"></span> SOLV Token.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div>-->
+                        <!--<input type="range" min="0" max="100" step="0.1" value="10.2" data-rangeslider />-->
+                        <!--<output></output>-->
+                    <!--</div>-->
+
+
+                    <div class="ico-buttons">
+                        <a href="../index.html" class="button" >Register Now</a>
+                        <a href="../index.html" class="button" >Back to Website</a>
+                    </div>
+                </div>
+
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -45,13 +125,106 @@
 
 			</div>
 		</div>
+
         
         
         
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-        
-        
+        <!--<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+        <script type="text/javascript" src="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/js/kinetic.js"></script>
+		<script type="text/javascript" src="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/jquery.final-countdown.js"></script>
+		<script type="text/javascript" src="rangeslider.js-2.3.0/rangeslider.min.js"></script>
+
+        <script type="text/javascript">
+            $('document').ready(function() {
+                'use strict';
+
+                $('.countdown').final_countdown({
+                    start: '1362139200',
+                    end: '1388461320',
+                    now: '1387461319'
+                });
+            });
+        </script>
+
+        <script>
+            var selectedCoin = "btc";
+            var currencyPrice = {
+                "btc": 0,
+                "eth": 0,
+                "nem": 0
+            };
+            $.get("https://api.coinmarketcap.com/v1/ticker/bitcoin/", function(data, status){
+                currencyPrice.btc = data[0].price_usd;
+//                console.log(data[0].price_usd, status)
+            });
+            $.get("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(data, status){
+                currencyPrice.eth = data[0].price_usd;
+//                console.log(data[0].price_usd, status)
+            });
+            $.get("https://api.coinmarketcap.com/v1/ticker/nem/", function(data, status){
+                currencyPrice.nem = data[0].price_usd;
+//                console.log(data[0].price_usd, status)
+            });
+
+            $('input#coin-value').change(function (evt) {
+//                console.log(typeof evt.target.value)
+//                console.log(currencyPrice[selectedCoin], typeof currencyPrice[selectedCoin])
+                $('p.result span').text(numeral(evt.target.value * currencyPrice[selectedCoin] * 10).format('0.0a'));
+//                console.log(evt.target.value * currencyPrice[selectedCoin] * 10)
+            })
+
+            $('input[name="coin"]').on('click', function (e) {
+                selectedCoin = e.target.value;
+//                console.log(e.target.value)
+            })
+
+            var $document = $(document);
+            var selector = '[data-rangeslider]';
+            var $element = $(selector);
+
+            var textContent = ('textContent' in document) ? 'textContent' : 'innerText';
+
+            // Example functionality to demonstrate a value feedback
+            function valueOutput(element) {
+                var value = element.value;
+                var output = element.parentNode.getElementsByTagName('output')[0] || element.parentNode.parentNode.getElementsByTagName('output')[0];
+                output[textContent] = value;
+            }
+
+            // Example functionality to demonstrate programmatic value changes
+            $document.on('click', '#js-example-change-value button', function(e) {
+                var $inputRange = $(selector, e.target.parentNode);
+                var value = $('input[type="number"]', e.target.parentNode)[0].value;
+                $inputRange.val(value).change();
+            });
+
+            // Basic rangeslider initialization
+            $element.rangeslider({
+                // Deactivate the feature detection
+                polyfill: false,
+                // Callback function
+                onInit: function() {
+                    valueOutput(this.$element[0]);
+                },
+                // Callback function
+                onSlide: function(position, value) {
+                    console.log('onSlide');
+                    console.log('position: ' + position, 'value: ' + value);
+                },
+                // Callback function
+                onSlideEnd: function(position, value) {
+                    console.log('onSlideEnd');
+                    console.log('position: ' + position, 'value: ' + value);
+                }
+            });
+        </script>
+
+
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script>
 			window.onload = function() { document.body.className = ''; }
