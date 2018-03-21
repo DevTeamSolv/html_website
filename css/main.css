@@ -1202,7 +1202,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     content: "";
 }
 
-.skill-bars li .percent5  { width: 5%; }
+.skill-bars li .percent0  { width: 0%; }
 .skill-bars li .percent10 { width: 10%; }
 .skill-bars li .percent15 { width: 15%; }
 .skill-bars li .percent20 { width: 20%; }
@@ -1843,7 +1843,17 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: relative;
     overflow: hidden;
 }
-
+.home-content h2 {
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    margin-left: 6px;
+}
 .home-content h3 {
     font-family: "montserrat-medium", sans-serif;
     font-size: 1.6rem;
@@ -1871,7 +1881,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-content__buttons {
     padding-top: 6rem;
-    text-align: left;
+    text-align: center;
 }
 
 .home-content__buttons .btn {
