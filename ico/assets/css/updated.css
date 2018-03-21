@@ -33,6 +33,15 @@
         height: 30px; }
       #main-1 .body .card .card-body p.result span {
         font-weight: bold; }
+    #main-1 .body .sliders {
+      width: 50%;
+      margin: 0px auto; }
+      #main-1 .body .sliders .custom-slider.btc .rangeslider__fill {
+        background: #F5922F; }
+      #main-1 .body .sliders .custom-slider.eth .rangeslider__fill {
+        background: #2F3030; }
+      #main-1 .body .sliders .custom-slider.nem .rangeslider__fill {
+        background: #42B6E5; }
 
 @media screen and (max-width: 767px) {
   .clock-item .wrap, .clock-item canvas {

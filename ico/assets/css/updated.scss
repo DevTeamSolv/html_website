@@ -44,6 +44,25 @@
         }
       }
     }
+    .sliders {
+      width: 50%;
+      margin: 0px auto;
+      .custom-slider.btc {
+        .rangeslider__fill {
+          background: #F5922F;
+        }
+      }
+      .custom-slider.eth {
+        .rangeslider__fill {
+          background: #2F3030;
+        }
+      }
+      .custom-slider.nem {
+        .rangeslider__fill {
+          background: #42B6E5;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 767px) {

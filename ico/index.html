@@ -105,10 +105,23 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div>-->
-                        <!--<input type="range" min="0" max="100" step="0.1" value="10.2" data-rangeslider />-->
-                        <!--<output></output>-->
-                    <!--</div>-->
+                    <div class="sliders">
+                        <div class="custom-slider btc">
+                            <input type="range" name="btc" min="0" max="100" step="0.1" value="10.2" data-rangeslider />
+                            <p class="output-btc"></p>
+                            <output></output>
+                        </div>
+                        <div class="custom-slider eth">
+                            <input type="range" name="eth" min="0" max="100" step="0.1" value="10.2" data-rangeslider />
+                            <p class="output-eth"></p>
+                            <output></output>
+                        </div>
+                        <div class="custom-slider nem">
+                            <input type="range" name="nem" min="0" max="100" step="0.1" value="10.2" data-rangeslider />
+                            <p class="output-nem"></p>
+                            <output></output>
+                        </div>
+                    </div>
 
 
                     <div class="ico-buttons">
@@ -172,15 +185,11 @@
             });
 
             $('input#coin-value').change(function (evt) {
-//                console.log(typeof evt.target.value)
-//                console.log(currencyPrice[selectedCoin], typeof currencyPrice[selectedCoin])
                 $('p.result span').text(numeral(evt.target.value * currencyPrice[selectedCoin] * 10).format('0.0a'));
-//                console.log(evt.target.value * currencyPrice[selectedCoin] * 10)
             })
 
             $('input[name="coin"]').on('click', function (e) {
                 selectedCoin = e.target.value;
-//                console.log(e.target.value)
             })
 
             var $document = $(document);
@@ -192,6 +201,7 @@
             // Example functionality to demonstrate a value feedback
             function valueOutput(element) {
                 var value = element.value;
+                console.log(element, 'valueOutput, element')
                 var output = element.parentNode.getElementsByTagName('output')[0] || element.parentNode.parentNode.getElementsByTagName('output')[0];
                 output[textContent] = value;
             }
@@ -210,16 +220,26 @@
                 // Callback function
                 onInit: function() {
                     valueOutput(this.$element[0]);
+                    console.log(textContent.element)
                 },
                 // Callback function
                 onSlide: function(position, value) {
                     console.log('onSlide');
                     console.log('position: ' + position, 'value: ' + value);
+                    console.log($(this.$element[0]).val());
+
+                    $('.output-btc').text($('input[name=btc]').val() * currencyPrice["btc"]);
+                    $('.output-eth').text($('input[name=eth]').val() * currencyPrice["eth"]);
+                    $('.output-nem').text($('input[name=nem]').val() * currencyPrice["nem"]);
+//                    this.$element[0].value = value;
+                    console.log(this.$element[0])
                 },
                 // Callback function
                 onSlideEnd: function(position, value) {
-                    console.log('onSlideEnd');
-                    console.log('position: ' + position, 'value: ' + value);
+//                    $('.output-btc').val($('input[name=btc]').val());
+//                    $('.output-btc').val($('input[name=btc]').val());
+//                    console.log('onSlideEnd');
+//                    console.log('position: ' + position, 'value: ' + value);
                 }
             });
         </script>
