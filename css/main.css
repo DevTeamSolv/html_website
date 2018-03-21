@@ -1531,33 +1531,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ## main navigation 
  * ------------------------------------------------------------------- */
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-     
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
- 
-body {
-    background: #eee;
-    color: #444;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    height: auto !important;
-    height: 100%;
-    min-height: 100%;
-    text-rendering: optimizeLegibility;
-}
- 
-div.wrapper {
-  margin: 20px auto;
-  width: 350px;
-}
+
 
 .header-nav {
     background: #0C0C0C;
