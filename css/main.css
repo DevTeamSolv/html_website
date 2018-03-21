@@ -134,7 +134,7 @@ a:hover, a:active {
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "montserrat-medium", sans-serif;
-    color: #000000;
+    color: #fff;
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -2285,9 +2285,10 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #39b54a;
-    color: #010507;
-    position: relative;
+     background-image: url(../images/carbon_full.png);
+     background-color: #39b54a;
+    color: #fff;
+    background-position: center;
 }
 
 .s-about .section-header.has-bottom-sep::before {
@@ -2818,7 +2819,7 @@ html.no-csstransitions .home-content__main {
 .s-clients {
     padding-top: 16.2rem;
     padding-bottom: 16.8rem;
-
+    background-image: url(../images/ab2.png);
     background-color: #fff;
     color: #757575;
     position: relative;
