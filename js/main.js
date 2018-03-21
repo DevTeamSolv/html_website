@@ -89,6 +89,8 @@
         closeButton.on('click', function(e){
             e.preventDefault();
             menuTrigger.trigger('click');	
+            $.modal.close();
+
         });
 
         // close menu clicking outside the menu itself
