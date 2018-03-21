@@ -1,74 +1,157 @@
 #main-1 {
   display: flex;
   align-items: center; }
-  #main-1 .body {
-    width: 80%;
-    margin: 0px auto; }
-    #main-1 .body h1 {
-      text-align: center;
-      margin: 30px 0px 40px; }
-    #main-1 .body p.val {
-      margin: 0px; }
-    #main-1 .body .clock.row {
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-    #main-1 .body .card {
-      padding: 20px;
-      max-width: 500px;
-      margin: 0px auto;
-      box-shadow: 0 1px 3px 3px #787b7b; }
-      #main-1 .body .card input {
-        font-weight: 500; }
-      #main-1 .body .card p {
-        font-weight: 400; }
-      #main-1 .body .card .rangeslider__handle::before {
-        content: "a";
-        background-color: red; }
-      #main-1 .body .card .card-header {
-        font-weight: bold;
-        display: flex;
-        justify-content: space-around; }
-      #main-1 .body .card .card-body input#coin-value {
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid #000;
-        height: 30px; }
-      #main-1 .body .card .card-body p.result span {
-        font-weight: bold; }
-    #main-1 .body .sliders {
-      width: 50%;
-      margin: 0px auto; }
-      #main-1 .body .sliders .custom-slider.btc .rangeslider__fill {
-        background: #F5922F; }
-      #main-1 .body .sliders .custom-slider.eth .rangeslider__fill {
-        background: #2F3030; }
-      #main-1 .body .sliders .custom-slider.nem .rangeslider__fill {
-        background: #42B6E5; }
+
+#main-1 .body {
+  width: 80%;
+  margin: 0px auto; }
+
+#main-1 .body h1 {
+  text-align: center;
+  margin: 30px 0px 40px; }
+
+#main-1 .body .participate-heading {
+  color: #ffffff;
+  font-size: 28px; }
+
+#main-1 .body p.val {
+  margin: 0px; }
+
+#main-1 .body .clock.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#main-1 .body .card {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0px auto;
+  box-shadow: 0 1px 3px 3px #787b7b; }
+
+#main-1 .body .card input {
+  font-weight: 500; }
+
+#main-1 .body .card p {
+  font-weight: 400; }
+
+#main-1 .body .card .rangeslider__handle::before {
+  content: "a";
+  background-color: red; }
+
+#main-1 .body .card .card-header {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around; }
+
+#main-1 .body .card .card-body input#coin-value {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  height: 30px; }
+
+#main-1 .body .card .card-body p.result span {
+  font-weight: bold; }
+
+#main-1 .body .calculator .calculator-heading {
+  text-align: center;
+  padding: 40px 0px; }
+
+#main-1 .body .calculator .calculator-heading h2 {
+  color: #ffffff;
+  font-size: 28px; }
+
+#main-1 .body .calculator .calculator-main {
+  display: flex;
+  justify-content: space-between; }
+
+#main-1 .body .calculator .calculator-main .left {
+  width: 50%;
+  display: block; }
+
+#main-1 .body .calculator .calculator-main .left .stats h3 {
+  color: #ffffff;
+  font-size: 20px; }
+
+#main-1 .body .calculator .calculator-main .left .stats p {
+  font-size: 16px !important;
+  padding: 5px 0px; }
+
+#main-1 .body .calculator .calculator-main .left .stats p b {
+  color: #ffffff; }
+
+#main-1 .body .calculator .calculator-main .left .stats p img {
+  width: 16px; }
+
+#main-1 .body .calculator .calculator-main .left .stats .border {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #4DA73D, #204C3B); }
+
+#main-1 .body .calculator .calculator-main .left .calc-button button {
+  width: 100%;
+  background: none;
+  border: 2px solid #ffffff;
+  height: 40px;
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer; }
+
+#main-1 .body .calculator .calculator-main .right {
+  width: 50%; }
+
+#main-1 .body .calculator .calculator-main .right .sliders {
+  width: 100%;
+  margin: 0px auto; }
+
+#main-1 .body .calculator .calculator-main .right .sliders .custom-slider.btc .rangeslider__fill {
+  background: #F5922F; }
+
+#main-1 .body .calculator .calculator-main .right .sliders .custom-slider.eth .rangeslider__fill {
+  background: #2F3030; }
+
+#main-1 .body .calculator .calculator-main .right .sliders .custom-slider.nem .rangeslider__fill {
+  background: #42B6E5; }
+
+#main-1 .body .calculator .calculator-main .right .sol-logo .image {
+  text-align: center; }
+
+#main-1 .body .calculator .calculator-main .right .sol-logo .image img {
+  width: 150px;
+  height: 150px; }
+
+#main-1 .body .calculator .calculator-main .right .sol-logo .sol-button {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+#main-1 .body .calculator .calculator-main .right .sol-logo .sol-button button {
+  width: 100px;
+  background: #5EBB46;
+  outline: none;
+  border: 1px solid #5EBB46;
+  border-radius: 30px;
+  color: #ffffff;
+  height: 30px;
+  cursor: pointer; }
 
 @media screen and (max-width: 767px) {
   .clock-item .wrap, .clock-item canvas {
     height: 110px;
     width: 110px; }
-
   .clock-item {
     margin: 0px; }
-
   .text .type-time {
     font-size: 14px !important;
     font-weight: 400 !important; } }
+
 @media screen and (max-width: 540px) {
   .clock-item .wrap, .clock-item canvas {
     height: 90px;
     width: 90px; }
-
   p.val {
     font-size: 26px !important;
     margin-top: 20px !important;
     margin-bottom: 0px !important; }
-
   .text .type-time {
     font-size: 13px !important;
     font-weight: 400 !important; } }
-
-/*# sourceMappingURL=updated.css.map */

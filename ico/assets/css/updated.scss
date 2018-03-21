@@ -8,6 +8,10 @@
       text-align: center;
       margin: 30px 0px 40px;
     }
+    .participate-heading{
+      color: #ffffff;
+      font-size: 28px;
+    }
     p.val {
       margin: 0px;
     }
@@ -48,22 +52,99 @@
         }
       }
     }
-    .sliders {
-      width: 50%;
-      margin: 0px auto;
-      .custom-slider.btc {
-        .rangeslider__fill {
-          background: #F5922F;
+    .calculator{
+      .calculator-heading{
+        text-align: center;
+        padding: 40px 0px;
+        h2{
+          color: #ffffff;
+          font-size: 28px;
         }
       }
-      .custom-slider.eth {
-        .rangeslider__fill {
-          background: #2F3030;
+      .calculator-main{
+        display: flex;
+        justify-content: space-between;
+        .left{
+          width: 50%;
+          display: block;
+          .stats{
+            h3{
+              color: #ffffff;
+              font-size: 20px;
+            }
+            p{
+              font-size: 16px !important;
+              padding: 5px 0px;
+              b{
+                color: #ffffff;
+              }
+              img{
+                width: 16px;
+              }
+            }
+            .border{
+              width: 100%;
+              height: 2px;
+              background: linear-gradient(to right, #4DA73D, #204C3B);
+            }
+          }
+          .calc-button{
+            button{
+              width: 100%;
+              background: none;
+              border: 2px solid #ffffff;
+              height: 40px;
+              color: #ffffff;
+              border-radius: 30px;
+              cursor: pointer;
+            }
+          }
         }
-      }
-      .custom-slider.nem {
-        .rangeslider__fill {
-          background: #42B6E5;
+        .right{
+          width: 50%;
+          .sliders {
+            width: 100%;
+            margin: 0px auto;
+            .custom-slider.btc {
+              .rangeslider__fill {
+                background: #F5922F;
+              }
+            }
+            .custom-slider.eth {
+              .rangeslider__fill {
+                background: #2F3030;
+              }
+            }
+            .custom-slider.nem {
+              .rangeslider__fill {
+                background: #42B6E5;
+              }
+            }
+          }
+          .sol-logo{
+            .image{
+              text-align: center;
+              img{
+                width: 150px;
+                height: 150px;
+              }
+            }
+            .sol-button{
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              button{
+                width: 100px;
+                background: #5EBB46;
+                outline: none;
+                border: 1px solid #5EBB46;
+                border-radius: 30px;
+                color: #ffffff;
+                height: 30px;
+                cursor: pointer;
+              }
+            }
+          }
         }
       }
     }
