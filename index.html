@@ -855,8 +855,7 @@ Our goal is to aid causes to help solve humanitarian issues and disasters around
 
 <!-- The Modal -->
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" 
-class="close" title="Close Modal">&times;</span>
+ 
 
   <!-- Modal Content -->
     
@@ -866,6 +865,8 @@ class="close" title="Close Modal">&times;</span>
   <div class="w3-modal-content">
 
     <header class="w3-container w3-teal"> 
+     <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">X</span>
       <section class="container">
     <div class="login">
       <h2><br>Login</h2>
@@ -919,7 +920,7 @@ class="close" title="Close Modal">X</span>
        
         </p>
          <a href="#" class="btn btn--stroke">
-                       Login
+                       Register
           </a></p></div> </section></header>
       </form>
     </div>
@@ -938,7 +939,7 @@ class="close" title="Close Modal">X</span>
 
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+ <div id="preloader">
         <div id="loader">
             <div class="line-scale-pulse-out">
                 <div></div>
@@ -960,21 +961,22 @@ class="close" title="Close Modal">X</span>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 <script src="js/jquery.countdown.js"></script>
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
     
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
-
+    }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+    
 }
 </script>
+        
     
     
     
