@@ -2880,11 +2880,16 @@ html.no-csstransitions .home-content__main {
 }
 
 .clients-testimonials .testimonials__avatar {
-    height: 8.4rem;
-    width: 8.4rem;
+    height: 12rem;
+    width: 12rem;
     border-radius: 50%;
     margin: 0 auto 1.2rem auto;
 }
+
+.column .container h2 {
+    color: #757575 !important;
+}
+
 
 .clients-testimonials .testimonials__name, 
 .clients-testimonials .testimonials__pos {
