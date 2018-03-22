@@ -99,8 +99,9 @@ g<!DOCTYPE HTML>
                                 <div class="stats">
                                     <div>
                                         <h3>Presale Coming Soon</h3>
-                                        <p><b>1 </b><img src="../images/logo.png"><b> = $0.10</b></p>
-                                        <p><b>1 </b><img src="../images/logo.png"><b> = $0.10</b></p>
+                                        <p class="btc"><img src="../images/logo.png"><b></b></p>
+                                        <p class="eth"><img src="../images/logo.png"><b></b></p>
+                                        <p class="nem"><img src="../images/logo.png"><b></b></p>
                                     </div>
                                     <div class="border"></div>
                                     <div>
@@ -114,7 +115,7 @@ g<!DOCTYPE HTML>
                             <div class="right">
                                 <div class="sliders">
                                     <div class="custom-slider btc">
-                                        <input type="range" name="btc" min="0" max="100" step="0.1" value="10.2" data-rangeslider />
+                                        <input type="range" name="btc" min="0" max="100000" step="10" data-rangeslider />
                                         <p class="output-btc"></p>
                                         <output></output>
                                     </div>
@@ -264,9 +265,12 @@ g<!DOCTYPE HTML>
                     console.log('position: ' + position, 'value: ' + value);
                     console.log($(this.$element[0]).val());
 
-                    $('.output-btc').text($('input[name=btc]').val() * currencyPrice["btc"]);
-                    $('.output-eth').text($('input[name=eth]').val() * currencyPrice["eth"]);
-                    $('.output-nem').text($('input[name=nem]').val() * currencyPrice["nem"]);
+                    $('p.btc b').text(numeral($('input[name=btc]').val() * currencyPrice["btc"]).format('0.000a'));
+                    $('p.eth b').text(numeral($('input[name=btc]').val() * currencyPrice["eth"]).format('0.000a'));
+                    $('p.nem b').text(numeral($('input[name=btc]').val() * currencyPrice["nem"]).format('0.000a'));
+                    $('.output-btc').text($('input[name=btc]').val());
+//                    $('.output-eth').text($('input[name=eth]').val() * currencyPrice["eth"]);
+//                    $('.output-nem').text($('input[name=nem]').val() * currencyPrice["nem"]);
 //                    this.$element[0].value = value;
                     console.log(this.$element[0])
                 },
