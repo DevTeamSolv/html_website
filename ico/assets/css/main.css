@@ -74,6 +74,18 @@
 		box-sizing: border-box;
 	}
 
+
+body {
+		height: 100%;
+		background-color: #ffffff;
+	
+		background-repeat: repeat,			no-repeat,			no-repeat;
+		background-size: 100px 100px, cover,				cover;
+		background-position: top left,		center center,		bottom center;
+		background-attachment: fixed,			fixed,				fixed;
+	}
+
+
 /* Basic */
 
 	body, input, select, textarea {
