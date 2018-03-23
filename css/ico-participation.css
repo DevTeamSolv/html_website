@@ -1,19 +1,22 @@
 .calculator {
-    margin-top: 20px; }
+    margin-top: 0px; }
 .calculator .calculator-heading {
     text-align: center;
     padding: 40px 0px; }
 .calculator .calculator-heading h2 {
     color: #ffffff;
-    font-size: 28px; }
+    font-size: 28px;
+    color: #6b6b6b;
+    margin: 0px;}
 .calculator .calculator-main {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+margin-top: 60px}
 .calculator .calculator-main .left {
     width: 500px;
     display: block; }
 .calculator .calculator-main .left .stats {
-    margin-top: 70px; }
+    text-align: left;}
 .calculator .calculator-main .left .stats .coin-logo img {
     width: 20px;
     margin-right: 10px; }
@@ -30,7 +33,8 @@
     font-size: 19px !important;
     padding: 5px 0px; }
 .calculator .calculator-main .left .stats p b {
-    color: #ffffff; }
+    color: #0C0C0C;
+    font-family: "montserrat-medium", sans-serif}
 .calculator .calculator-main .left .stats p img {
     width: 16px; }
 .calculator .calculator-main .left .stats .border {
@@ -40,11 +44,13 @@
 .calculator .calculator-main .left .calc-button button {
     width: 100%;
     background: none;
-    border: 2px solid #ffffff;
-    height: 40px;
-    color: #ffffff;
+    border: 2px solid #0C0C0C;
+    height: 50px;
+    color: #0C0C0C;
     border-radius: 30px;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 20px;
+line-height: 0}
 .calculator .calculator-main button.solv {
     font-size: 19px; }
 .calculator .calculator-main .right {
@@ -75,11 +81,15 @@
     display: flex;
     justify-content: center; }
 .calculator .calculator-main .right .sol-logo .sol-button button {
-    width: 100px;
+    width: 150px;
     background: #5EBB46;
     outline: none;
     border: 1px solid #5EBB46;
     border-radius: 30px;
     color: #ffffff;
-    height: 30px;
-    cursor: pointer; }
+    height: 40px;
+    cursor: pointer;
+line-height: 1.15}
+.col-full{
+    text-align: center;
+}
