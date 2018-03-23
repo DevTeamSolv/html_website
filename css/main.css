@@ -113,6 +113,10 @@ body {
 }
 
 
+style2{
+  color: #396;
+}
+
 
 
 /* ------------------------------------------------------------------- 
@@ -3776,6 +3780,8 @@ h1{
   font-size: 40px;
   margin: 40px 0px 20px;
 }
+
+
 
 #clockdiv{
 	font-family: sans-serif;
