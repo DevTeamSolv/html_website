@@ -1933,9 +1933,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll {
-    position: absolute;
-    right: 9.5rem;
-    bottom: 8.4rem;
+    /*position: absolute;*/
+    /*right: 9.5rem;*/
+    /*bottom: 8.4rem;*/
 }
 
 .home-content__scroll a {
