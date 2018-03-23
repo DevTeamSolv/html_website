@@ -83,6 +83,13 @@
 	}
 }
 
+@media (min-width: 768px)  {
+
+	.clock-item .wrap {
+		width: 200px;
+	}
+}
+
 @media (max-width: 767px) {
 	.clock-item {
 		/*margin: 0px 30px 30px 30px;*/
