@@ -1,12 +1,46 @@
 #main-1 {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  .nav-bar-cont {
+    display: flex;
+    justify-content: center;
+    .nav-bar {
+      position: fixed;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      a {
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .btn, button, input[type="submit"], input[type="reset"], input[type="button"] {
+      display: inline-block;
+      font-family: "montserrat-medium", sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      height: 4.2rem;
+      line-height: calc(4.2rem - .4rem);
+      padding: 0 0.9rem;
+      margin: 0 0rem 0rem 0px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: transparent;
+      border: .2rem solid #c5c5c5;
+    }
+  }
   .body {
     width: 80%;
     margin: 0px auto;
     h1 {
       text-align: center;
-      margin: 30px 0px 40px;
+      margin: 140px 0px 40px;
     }
     .participate-heading{
       color: #ffffff;
@@ -85,15 +119,28 @@
         display: flex;
         justify-content: space-between;
         .left{
-          width: 50%;
+          width: 500px;
           display: block;
           .stats{
+            margin-top: 70px;
+            .coin-logo img {
+              width: 20px;
+              margin-right: 10px;
+            }
+            .coin-logo.btc img {
+              width: 25px;
+              margin-right: 10px;
+            }
+            .coin-logo.eth img {
+              width: 14px;
+              margin-right: 10px;
+            }
             h3{
               color: #ffffff;
               font-size: 20px;
             }
             p{
-              font-size: 16px !important;
+              font-size: 19px !important;
               padding: 5px 0px;
               b{
                 color: #ffffff;
@@ -120,14 +167,25 @@
             }
           }
         }
+        button.solv {
+          font-size: 19px;
+        }
         .right{
           width: 50%;
           .sliders {
             width: 100%;
             margin: 0px auto;
+
+            .rangeslider__handle {
+              width: 35px !important;
+              height: 35px !important;
+            }
+            .rangeslider--horizontal {
+              height: 12px;
+            }
             .custom-slider.btc {
               .rangeslider__fill {
-                background: #F5922F;
+                background: #5dbc46;
               }
             }
             .custom-slider.eth {
@@ -142,6 +200,7 @@
             }
           }
           .sol-logo{
+            margin-top: 70px;
             .image{
               text-align: center;
               img{
