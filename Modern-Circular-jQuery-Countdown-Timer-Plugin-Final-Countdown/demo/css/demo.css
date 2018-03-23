@@ -18,6 +18,7 @@
 /*}*/
 
 .countdown-container {
+	margin-top: 80px;
 	/*position: relative;*/
 	/*top: -30%;*/
 	/*-webkit-transform: translateY(-50%);*/
@@ -27,9 +28,11 @@
 }
 .countdown-container .clock.row {
 	max-width: none;
-    width: 50%;
+    width: 111%;
 	display: flex;
 	justify-content: space-between;
+	margin-right: 0px;
+	margin-left: 0px;
 }
 .kineticjs-content {
 	/*width: 200px !important;*/
@@ -89,10 +92,20 @@
     color: #fff;
     font-size: 30px;
     font-weight: bold;
-    margin-top: -30px;
+    margin-top: -60px;
     position: absolute;
     top: 50%;
     text-align: center;
     text-shadow: 1px 1px 1px black;
     width: 100%;
  }
+
+.clock-item .timer-text p{
+	margin-bottom: 0px;
+	font-size: 24px;
+}
+
+.clock-item .timer-text .val{
+	font-size: 50px;
+	line-height: 1.3;
+}
