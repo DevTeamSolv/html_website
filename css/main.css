@@ -224,6 +224,9 @@ p.lead {
 
 .h10{
 color: #000
+}
+    .h11{
+color: #fff
     
     
 }
@@ -1850,6 +1853,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
+
+
+
+
+
+
 /* ------------------------------------------------------------------- 
  * ## home content
  * ------------------------------------------------------------------- */
@@ -2298,7 +2307,37 @@ html.no-csstransitions .home-content__main {
     line-height: 1.75;
     text-align: center;
     max-width: 1024px;
+
 }
+
+
+
+
+.s-about2 {
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
+    background-color: grey;
+    color: #fff;
+    background-image: url(../images/greyscalebg.jpg);
+    background-position: center;
+ 
+}
+
+.s-about2 .section-header.has-bottom-sep::before {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.s-about3 {
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
+    background-color: #39b54a;
+    color: #fff;
+ 
+}
+
+.s-about3 .section-header.has-bottom-sep::before {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 
@@ -2455,9 +2494,20 @@ html.no-csstransitions .home-content__main {
 .s-services {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
+    background-image: url(../images/service-bg.jpg);
+   background-repeat: no-repeat;
+    background-position: right top;
     background-color: whitesmoke;
     color: #757575;
-    position: relative;
+    
+}
+
+.s-services2 {
+    padding-top: 16.2rem;
+    padding-bottom: 13.2rem;
+    background-color: whitesmoke;
+    color: #757575;
+    
 }
 
 
@@ -2878,8 +2928,8 @@ html.no-csstransitions .home-content__main {
 }
 
 .clients-testimonials .testimonials__avatar {
-    height: 12rem;
-    width: 12rem;
+    height: 25.4rem;
+    width: 25.4rem;
     border-radius: 50%;
     margin: 0 auto 1.2rem auto;
 }
