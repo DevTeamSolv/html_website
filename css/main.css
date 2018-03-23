@@ -2490,9 +2490,20 @@ html.no-csstransitions .home-content__main {
 .s-services {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
+    background-image: url(../images/service-bg.jpg);
+   background-repeat: no-repeat;
+    background-position: right top;
     background-color: whitesmoke;
     color: #757575;
-    position: relative;
+    
+}
+
+.s-services2 {
+    padding-top: 16.2rem;
+    padding-bottom: 13.2rem;
+    background-color: whitesmoke;
+    color: #757575;
+    
 }
 
 
