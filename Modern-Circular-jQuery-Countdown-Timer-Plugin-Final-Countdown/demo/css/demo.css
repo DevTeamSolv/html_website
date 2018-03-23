@@ -45,9 +45,6 @@
 	width: 100%;
 }
 
-.clock-item .wrap {
-	max-width: 200px;
-}
 
 .clock-canvas {
 	background-color: rgba(255, 255, 255, .1);
@@ -80,11 +77,18 @@
 	.clock-item {
 		margin-bottom: 30px;		
 	}
+
+	.clock-item .wrap {
+		width: 200px;
+	}
 }
 
 @media (max-width: 767px) {
 	.clock-item {
 		/*margin: 0px 30px 30px 30px;*/
+	}
+	.clock-item .wrap {
+		max-width: 200px;
 	}
 }
 
@@ -108,4 +112,8 @@
 .clock-item .timer-text .val{
 	font-size: 50px;
 	line-height: 1.3;
+}
+
+@media only screen and (max-width: 768px){
+
 }
