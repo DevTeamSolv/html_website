@@ -204,7 +204,7 @@
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #348cb2 url("images/background2.jpg") ;
+		background: #348cb2 url("images/m5_preview.png") ;
 		
 		height: 100%;
 		left: 0;
@@ -351,6 +351,10 @@
 		text-align: center;
 		top: 0;
 		width: 100%;
+	}
+	#main-1 {
+		position: relative;
+		min-height: 100vh;
 	}
 
 		#main:before {
@@ -522,11 +526,12 @@
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 		cursor: default;
-		display: inline-block;
+		display: flex;
+		flex-direction: column;
 		opacity: 0;
 		position: relative;
 		text-align: center;
-		top: -1em;
+		top: 0em;
 		vertical-align: middle;
 		width: 90%;
 	}
@@ -1063,3 +1068,78 @@
 		#header nav {
 			padding: 0 1em;
 		} }
+
+
+
+/*Timer */
+html, body {
+	height: 100%;
+}
+html {
+	background-image: url('../img/sample.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+body {
+	background-color: rgba(44,62,80 , 0.6 );
+	background-image: url('../img/pattern.png');
+	background-position: center;
+	background-repeat: repeat;
+	font-family: 'Raleway', 'Arial', sans-serif;
+}
+.countdown-container {
+	/*position: relative;*/
+	/*top: -30%;*/
+	/*-webkit-transform: translateY(-50%);*/
+	/*-moz-transform: translateY(-50%);*/
+	/*transform: translateY(-50%);*/
+}
+.clock-item .inner {
+	height: 0px;
+	padding-bottom: 100%;
+	position: relative;
+	width: 100%;
+}
+.clock-canvas {
+	background-color: rgba(255, 255, 255, .1);
+	border-radius: 50%;
+	height: 0px;
+	padding-bottom: 100%;
+}
+.text {
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	width: 100%;
+}
+.text .val {
+	font-size: 50px;
+}
+.text .type-time {
+	font-size: 20px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.clock-item {
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 767px) {
+	.clock-item {
+		margin: 0px 30px 30px 30px;
+	}
+}
+.clock-item .wrap {
+	width: 150px;
+	height: 150px;
+	margin: 0px auto;
+}
+.clock-item .wrap .canvas {
+	width: 150px !important;
+	height: 150px !important;
+}

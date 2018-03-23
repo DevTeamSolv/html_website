@@ -1,0 +1,277 @@
+#main-1 {
+  display: flex;
+  align-items: center;
+  .body {
+    width: 80%;
+    margin: 0px auto;
+    h1 {
+      text-align: center;
+      margin: 30px 0px 40px;
+    }
+    .participate-heading{
+      color: #ffffff;
+      font-size: 28px;
+    }
+    p.val {
+      margin: 0px;
+    }
+    .clock.row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .clock-item{
+      .timer-text{
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: -30px;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        width: 100%;
+        .val{
+          font-size: 50px;
+        }
+        .type-time{
+          font-size: 20px;
+        }
+      }
+    }
+    .card {
+      padding: 20px;
+      max-width: 500px;
+      margin: 0px auto;
+      box-shadow: 0 1px 3px 3px #787b7b;
+      input {
+        font-weight: 500;
+      }
+      p{
+        font-weight: 400;
+      }
+      .rangeslider__handle::before {
+        content: "a";
+        background-color: red;
+      }
+      .card-header {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+      }
+      .card-body {
+        input#coin-value {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #000;
+          height: 30px;
+        }
+        p.result span {
+          font-weight: bold;
+        }
+      }
+    }
+    .calculator{
+      margin-top: 20px;
+      .calculator-heading{
+        text-align: center;
+        padding: 40px 0px;
+        h2{
+          color: #ffffff;
+          font-size: 28px;
+        }
+      }
+      .calculator-main{
+        display: flex;
+        justify-content: space-between;
+        .left{
+          width: 50%;
+          display: block;
+          .stats{
+            h3{
+              color: #ffffff;
+              font-size: 20px;
+            }
+            p{
+              font-size: 16px !important;
+              padding: 5px 0px;
+              b{
+                color: #ffffff;
+              }
+              img{
+                width: 16px;
+              }
+            }
+            .border{
+              width: 100%;
+              height: 2px;
+              background: linear-gradient(to right, #4DA73D, #204C3B);
+            }
+          }
+          .calc-button{
+            button{
+              width: 100%;
+              background: none;
+              border: 2px solid #ffffff;
+              height: 40px;
+              color: #ffffff;
+              border-radius: 30px;
+              cursor: pointer;
+            }
+          }
+        }
+        .right{
+          width: 50%;
+          .sliders {
+            width: 100%;
+            margin: 0px auto;
+            .custom-slider.btc {
+              .rangeslider__fill {
+                background: #F5922F;
+              }
+            }
+            .custom-slider.eth {
+              .rangeslider__fill {
+                background: #2F3030;
+              }
+            }
+            .custom-slider.nem {
+              .rangeslider__fill {
+                background: #42B6E5;
+              }
+            }
+          }
+          .sol-logo{
+            .image{
+              text-align: center;
+              img{
+                width: 150px;
+                height: 150px;
+              }
+            }
+            .sol-button{
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              button{
+                width: 100px;
+                background: #5EBB46;
+                outline: none;
+                border: 1px solid #5EBB46;
+                border-radius: 30px;
+                color: #ffffff;
+                height: 30px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+output{
+  color: #ffffff;
+}
+
+@media screen and (max-width: 897px){
+  .calculator-main{
+    display: block !important;
+    .left{
+      margin: 0px auto;
+    }
+    .right{
+      margin: 0px auto;
+      padding: 50px 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clock-item .wrap, .clock-item canvas {
+    height: 110px;
+    width: 110px;
+  }
+  .clock-item {
+    margin: 0px;
+  }
+  //p.val {
+  //  font-size: 30px !important;
+  //  margin-top: 10px !important;
+  //  margin-bottom: 0px !important;
+  //}
+  .timer-text{
+    margin-top: -22px !important;
+    .val{
+      font-size: 35px !important;
+    }
+    .type-time{
+      font-size: 15px !important;
+    }
+  }
+
+  .calculator-main{
+    .left{
+    }
+    .right{
+      width: 80% !important;
+    }
+  }
+
+}
+@media screen and (max-width: 540px) {
+  .body{
+    width: 90% !important;
+  }
+  .clock-item .wrap, .clock-item canvas {
+    height: 90px;
+    width: 90px;
+  }
+  p.val {
+    font-size: 26px !important;
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+  }
+  .timer-text .type-time {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+  }
+  .timer-text {
+    margin-top: -42px !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .body{
+    width: 95% !important;
+  }
+  .clock-item .wrap, .clock-item canvas {
+    height: 80px;
+    width: 80px;
+  }
+  p.val {
+    font-size: 13px !important;
+  }
+  .timer-text .type-time {
+    font-size: 12px !important;
+  }
+  .timer-text {
+
+  }
+  .calculator-heading{
+    h2 {
+      font-size: 22px !important;
+    }
+  }
+  .calculator-main{
+    .left{
+      width: 70% !important;
+      h3{
+        font-size: 18px !important;
+      }
+    }
+    .right{
+      width: 90% !important;
+    }
+  }
+}
