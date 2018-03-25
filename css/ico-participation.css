@@ -1,4 +1,6 @@
 .calculator {
+    width: 90%;
+    margin: 0px auto;
     margin-top: 0px; }
 .calculator .calculator-heading {
     text-align: center;
