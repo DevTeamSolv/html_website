@@ -1,5 +1,5 @@
 .calculator {
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
     margin-top: 0px; }
 .calculator .calculator-heading {
@@ -20,10 +20,10 @@ margin-top: 60px}
 .calculator .calculator-main .left .stats {
     text-align: left;}
 .calculator .calculator-main .left .stats .coin-logo img {
-    width: 20px;
+    width: 22px;
     margin-right: 10px; }
 .calculator .calculator-main .left .stats .coin-logo.btc img {
-    width: 25px;
+    width: 22px;
     margin-right: 10px; }
 .calculator .calculator-main .left .stats .coin-logo.eth img {
     width: 14px;
@@ -32,8 +32,11 @@ margin-top: 60px}
     color: #ffffff;
     font-size: 20px; }
 .calculator .calculator-main .left .stats p {
-    font-size: 19px !important;
+    font-size: 25px !important;
     padding: 5px 0px; }
+.paddingleft8px{
+    margin-right: 18px !important;
+}
 .calculator .calculator-main .left .stats p b {
     color: #0C0C0C;
     font-family: "montserrat-medium", sans-serif}
@@ -45,14 +48,14 @@ margin-top: 60px}
     background: linear-gradient(to right, #4DA73D, #204C3B); }
 .calculator .calculator-main .left .calc-button button {
     width: 100%;
-    background: none;
-    border: 2px solid #0C0C0C;
-    height: 50px;
-    color: #0C0C0C;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 20px;
-line-height: 0}
+    background: transparent !important;
+    border: 0.2rem solid #FFFFFF;
+    color: #fff;
+height: 50px;
+    filter: drop-shadow(5px 5px 5px #222);
+    font-size: 1.2rem;
+width: 50%;
+}
 .calculator .calculator-main button.solv {
     font-size: 19px; }
 .calculator .calculator-main .right {
@@ -84,14 +87,13 @@ line-height: 0}
     justify-content: center; }
 .calculator .calculator-main .right .sol-logo .sol-button button {
     width: 150px;
-    background: #5EBB46;
-    outline: none;
-    border: 1px solid #5EBB46;
-    border-radius: 30px;
-    color: #ffffff;
-    height: 40px;
-    cursor: pointer;
-line-height: 1.15}
+    background: transparent !important;
+    border: 0.2rem solid #5DBC46;
+    color: #5DBC46;
+    height: 50px;
+    filter: drop-shadow(5px 5px 5px #222);
+    font-size: 1.2rem;
+margin-top: 20px}
 .col-full{
     text-align: center;
 }
