@@ -4,11 +4,15 @@
     <list default="true" id="509cdc4c-3682-43d0-b915-0818705f892b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 <<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/human.html" afterPath="$PROJECT_DIR$/human.html" />
+=======
+<<<<<<< HEAD
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/human.html" afterPath="$PROJECT_DIR$/human.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
 >>>>>>> c8599eda1e198ed4522af758a1cf3482975e4c0c
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,6 +57,13 @@
         </entry>
       </file>
 <<<<<<< HEAD
+      <file leaf-file-name="human.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/human.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="509" column="0" lean-forward="false" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
+=======
+<<<<<<< HEAD
       <file leaf-file-name="updated.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ico/assets/css/updated.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,11 +87,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="538">
               <caret line="2289" column="0" lean-forward="false" selection-start-line="2289" selection-start-column="0" selection-end-line="2289" selection-end-column="0" />
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+=======
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ico/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,9 +123,10 @@
               <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
 =======
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="13383">
               <caret line="1848" column="19" lean-forward="false" selection-start-line="1848" selection-start-column="19" selection-end-line="1848" selection-end-column="19" />
 >>>>>>> c8599eda1e198ed4522af758a1cf3482975e4c0c
               <folding />
@@ -376,12 +392,22 @@
       <workItem from="1521538558309" duration="10767000" />
 =======
       <workItem from="1521458426322" duration="7385000" />
+<<<<<<< HEAD
+      <workItem from="1521533211306" duration="6950000" />
+=======
       <workItem from="1521533211306" duration="5751000" />
 >>>>>>> c8599eda1e198ed4522af758a1cf3482975e4c0c
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="14335000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="19336000" />
   </component>
@@ -394,6 +420,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
 >>>>>>> c8599eda1e198ed4522af758a1cf3482975e4c0c
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2470238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -802,8 +829,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/human.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="23">
+          <caret line="509" column="0" lean-forward="false" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
+=======
 <<<<<<< HEAD
         <state relative-caret-position="250">
           <caret line="719" column="0" lean-forward="false" selection-start-line="719" selection-start-column="0" selection-end-line="720" selection-end-column="0" />
@@ -839,11 +870,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13383">
+          <caret line="1848" column="19" lean-forward="false" selection-start-line="1848" selection-start-column="19" selection-end-line="1848" selection-end-column="19" />
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="2289" column="0" lean-forward="false" selection-start-line="2289" selection-start-column="0" selection-end-line="2289" selection-end-column="0" />
@@ -853,6 +890,7 @@
         <state relative-caret-position="91">
           <caret line="509" column="20" lean-forward="false" selection-start-line="509" selection-start-column="20" selection-end-line="509" selection-end-column="20" />
 >>>>>>> c8599eda1e198ed4522af758a1cf3482975e4c0c
+>>>>>>> 1bf55dbbd935cbe3a34c4eb3ca52df43abfb9892
           <folding />
         </state>
       </provider>

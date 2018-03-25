@@ -12,9 +12,6 @@
 <div class="row about-desc">
     <div class="col-full">
         <div class="calculator">
-            <div class="calculator-heading">
-                <h2>Calculate SOLV Tokens</h2>
-            </div>
             <div class="calculator-main">
                 <div class="left">
                     <div class="stats">
@@ -57,7 +54,7 @@
 
                     <div class="sol-logo">
                         <div class="solv-svg-con">
-                            <svg class="solv-svg" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 1351 1351.031">
+                            <svg class="solv-svg" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 1351 1351.031">
                                 <defs>
                                     <linearGradient id="half_grad2" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(90)" >
                                         <stop id="solv1" offset="50%" stop-color="#ffffff5a"/>
@@ -164,9 +161,9 @@
             valueOutput(this.$element[0]);
 //                    console.log(textContent.element)
 
-            $('p.btc b').text(numeral($('input[name=btc]').val() * currencyPrice["btc"]).format('0.000a'));
-            $('p.eth b').text(numeral($('input[name=btc]').val() * currencyPrice["eth"]).format('0.000a'));
-            $('p.nem b').text(numeral($('input[name=btc]').val() * currencyPrice["nem"]).format('0.000a'));
+            $('p.btc b').text("0.578");
+            $('p.eth b').text("9.772");
+            $('p.nem b').text("18.310K");
             $('.solv').text($('input[name=btc]').val());
 
             var percent = $('input[name=btc]').val();
@@ -189,7 +186,6 @@
 
             var percent = $('input[name=btc]').val();
             var x = 100-(parseInt(percent)/1000);
-            console.log(percent)
             $("#solv1").attr('offset', x + '%')
             $("#solv2").attr('offset', x + '%')
 //                    $('.output-eth').text($('input[name=eth]').val() * currencyPrice["eth"]);

@@ -1298,6 +1298,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #FFFFFF;
 }
 
+@media only screen and (max-width: 399px){
+    .col-full .display-1 {
+        font-size: 5rem !important;
+    }
+}
 .display-2 {
     font-family: "montserrat-medium", sans-serif;
     font-size: 5.2rem;
@@ -2990,11 +2995,12 @@ html.no-csstransitions .home-content__main {
 }
 
 .clients-testimonials .testimonials p {
-    font-family: "lora-regular", serif;
+    /*font-family: "lora-regular", serif;*/
+    margin-bottom: 0px;
+    margin-top: 25px;
     font-size: 3rem;
     line-height: 1.8;
     color: #555555;
-    margin-bottom: 6rem;
 }
 
 .clients-testimonials .testimonials__slide {
