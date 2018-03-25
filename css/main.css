@@ -1450,7 +1450,15 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     }
 }
 
+iframe.calculator {
+    width: 100%;
+    height: 700px;
+    border: navajowhite;
+    overscroll-behavior-y: none;
+}
+@media {
 
+}
 /* ------------------------------------------------------------------- 
  * ## slick slider 
  * ------------------------------------------------------------------- */
@@ -1812,6 +1820,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     }
     .header-menu-toggle {
         right: 25px;
+    }
+    .calculator-main {
+        display: flex;
+        flex-direction: column;
+    }
+    iframe.calculator {
+        width: 100%;
+        height: 1200px;
+        border: navajowhite;
+        overscroll-behavior-y: none;
     }
 }
 
@@ -2225,6 +2243,14 @@ html.no-csstransitions .home-content__main {
     }
 }
 
+@media only screen and (min-width: 600px) {
+    iframe.calculator {
+        width: 100%;
+        height: 700px;
+        border: navajowhite;
+        overscroll-behavior-y: none;
+    }
+}
 @media only screen and (max-width: 600px) {
     .home-content h1 {
         font-size: 3.8rem;
@@ -2506,12 +2532,12 @@ html.no-csstransitions .home-content__main {
 .s-services {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
-    background-image: url(../images/service-bg.jpg);
+    background-image: url(../images/fliped_ico_background.jpg);
    background-repeat: no-repeat;
     background-position: right top;
     background-color: whitesmoke;
     color: #757575;
-    
+    background-size: cover;
 }
 
 .s-services2 {
@@ -2526,12 +2552,13 @@ html.no-csstransitions .home-content__main {
 .s-services3 {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
-    background-image: url(../images/1907.jpg);
+    background-image: url(../images/fliped_ico_background.jpg);
    background-repeat: no-repeat;
     background-position: right top;
     background-color: whitesmoke;
     color: #757575;
-    
+    background-size: cover;
+
 }
 
 .s-services3 .shadow-overlay {
