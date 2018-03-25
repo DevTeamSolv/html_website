@@ -37,6 +37,8 @@
 
 .clients-testimonials .display-2 {
   margin-bottom: 60px; }
+.clients-testimonials h2 {
+  font-size: 2.8rem; }
 
 @media only screen and (max-width: 992px) {
   .clients-testimonials .testimonials__avatar {
