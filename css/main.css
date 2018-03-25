@@ -1298,6 +1298,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #FFFFFF;
 }
 
+@media only screen and (max-width: 399px){
+    .col-full .display-1 {
+        font-size: 5rem !important;
+    }
+}
 .display-2 {
     font-family: "montserrat-medium", sans-serif;
     font-size: 5.2rem;

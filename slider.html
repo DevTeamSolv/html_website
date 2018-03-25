@@ -161,9 +161,9 @@
             valueOutput(this.$element[0]);
 //                    console.log(textContent.element)
 
-            $('p.btc b').text(numeral($('input[name=btc]').val() * currencyPrice["btc"]).format('0.000a'));
-            $('p.eth b').text(numeral($('input[name=btc]').val() * currencyPrice["eth"]).format('0.000a'));
-            $('p.nem b').text(numeral($('input[name=btc]').val() * currencyPrice["nem"]).format('0.000a'));
+            $('p.btc b').text("0.578");
+            $('p.eth b').text("9.772");
+            $('p.nem b').text("18.310K");
             $('.solv').text($('input[name=btc]').val());
 
             var percent = $('input[name=btc]').val();
@@ -186,7 +186,6 @@
 
             var percent = $('input[name=btc]').val();
             var x = 100-(parseInt(percent)/1000);
-            console.log(percent)
             $("#solv1").attr('offset', x + '%')
             $("#solv2").attr('offset', x + '%')
 //                    $('.output-eth').text($('input[name=eth]').val() * currencyPrice["eth"]);

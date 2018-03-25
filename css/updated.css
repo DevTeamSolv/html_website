@@ -8,11 +8,12 @@
   display: flex;
   justify-content: center; }
   .nav-bar-cont .opaque {
-    border: none;
     background-color: #000000;
+    border: 2px solid #39b54a;
     color: #39b54a; }
   .nav-bar-cont a.opaque:hover {
-    color: #c5c5c5; }
+    color: #c5c5c5;
+    border-color: #c5c5c5; }
   .nav-bar-cont .nav-bar {
     position: fixed;
     -webkit-transition: all 0.5s ease-in-out;
