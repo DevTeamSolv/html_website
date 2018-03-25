@@ -99,9 +99,9 @@
     -webkit-transform: translateY(0) scale(1, 1);
     transform: translateY(0) scale(1, 1);
 }
-.modal-frame.state-leave {
-    visibility: visible;
-}
+/*.modal-frame.state-leave {*/
+    /*visibility: visible;*/
+/*}*/
 .modal-frame.state-leave .modal-inset {
     -moz-animation: modalHeadOut 0.35s ease 0.1s;
     -webkit-animation: modalHeadOut 0.35s ease 0.1s;
