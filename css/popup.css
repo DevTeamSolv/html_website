@@ -3,21 +3,22 @@
 }
 
 .fancy-btn {
+    background: transparent !important;
+    border: 0.2rem solid #c5c5c5;
+    color: #555555;
+    filter: drop-shadow(5px 5px 5px #222);
     -webkit-appearance: none;
     cursor: pointer;
     outline: none;
-    border: none;
-    position: relative;
-    top: 50%;
+    position: absolute;
+    top: 90%;
     display: block;
-    min-width: 10%;
+    min-width: 5%;
     line-height: 55px;
     font-size: 14px;
     text-transform: uppercase;
     margin: 0 auto;
     padding: 0 10px;
-    background-color: #F2594B;
-    color: #FFF;
     border-radius: 3px;
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -142,7 +143,7 @@
     position: relative;
     padding: 60px;
     background-color: white;
-    min-width: 320px;
+    width: 50%;
     min-height: 126px;
     margin: auto;
     visibility: hidden;
@@ -164,8 +165,8 @@
     display: block;
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     padding: 10px;
     opacity: .4;
 }
@@ -333,4 +334,34 @@
         -webkit-transform: translateY(35px) scale(0.97, 0.97);
         transform: translateY(35px) scale(0.97, 0.97);
     }
+}
+
+@media only screen and (min-width: 1001px){
+    .modal-frame.state-appear .modal-inset{
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+    .modal-frame.state-appear .modal-inset{
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+
+    .modal-frame.state-appear .modal-inset{
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .modal-frame.state-appear .modal-inset{
+        width: 90%;
+    }
+
 }
