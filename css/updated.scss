@@ -12,12 +12,13 @@
   display: flex;
   justify-content: center;
   .opaque {
-    border: none;
     background-color: #000000;
+    border: 2px solid #39b54a;
     color: #39b54a;
   }
   a.opaque:hover {
     color: #c5c5c5;
+    border-color: #c5c5c5;
   }
   .nav-bar {
     position: fixed;

@@ -189,7 +189,7 @@ output {
     margin: 0px; }
 
   .timer-text {
-    margin-top: -22px !important; }
+    margin-top: -41px !important; }
     .timer-text .val {
       font-size: 35px !important; }
     .timer-text .type-time {
@@ -215,7 +215,7 @@ output {
     font-weight: 400 !important; }
 
   .timer-text {
-    margin-top: -42px !important; } }
+    margin-top: -60px !important; } }
 @media screen and (max-width: 430px) {
   .body {
     width: 95% !important; }
@@ -228,7 +228,13 @@ output {
     font-size: 13px !important; }
 
   .timer-text .type-time {
-    font-size: 12px !important; }
+    font-size: 12px !important;
+    line-height: 0;
+  }
+
+  .clock-item .timer-text{
+    margin-top: -53px !important;
+  }
 
   .calculator-heading h2 {
     font-size: 22px !important; }
