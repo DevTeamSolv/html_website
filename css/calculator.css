@@ -1,0 +1,13 @@
+@media only screen and (max-width: 600px) {
+    .calculator-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calculator .calculator-main {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        align-items: center;
+    }
+}
