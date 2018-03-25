@@ -80,6 +80,8 @@ display: inline;
 }
 
 
+
+
 html {
     font-size: 10px;
 }
@@ -110,6 +112,11 @@ body {
     padding: 0;
 }
 
+
+style2{
+  color: #396;
+ 
+}
 
 
 
@@ -1938,9 +1945,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll {
-    /*position: absolute;*/
-    /*right: 9.5rem;*/
-    /*bottom: 8.4rem;*/
+    position: absolute;
+    right: 9.5rem;
+    bottom: 8.4rem;
 }
 
 .home-content__scroll a {
@@ -2515,12 +2522,14 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-services3 {
-    width: 100%;
-    height: 100%;
-    min-height: 786px;
-    background-color: transparent;
-    position: relative;
-    display: table;
+    padding-top: 16.2rem;
+    padding-bottom: 13.2rem;
+    background-image: url(../images/1907.jpg);
+   background-repeat: no-repeat;
+    background-position: right top;
+    background-color: whitesmoke;
+    color: #757575;
+    
 }
 
 .s-services3 .shadow-overlay {
@@ -3772,6 +3781,8 @@ h1{
   font-size: 40px;
   margin: 40px 0px 20px;
 }
+
+
 
 #clockdiv{
 	font-family: sans-serif;
