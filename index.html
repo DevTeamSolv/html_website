@@ -35,7 +35,6 @@
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
-    <script src="js/popup.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -760,7 +759,6 @@
                     <!--<div class="modal-overlay"></div>-->
 
 
-                    <!--<button class="fancy-btn open">Can I haz Modal?</button>-->
                     <div class="row">
                         <div class="column">
                             <div class="card">
@@ -769,6 +767,7 @@
                                 <div class="container">
                                     <p class="title">Andrew Ingram</p>
                                     <h2>CEO & Founder</h2>
+                                    <button class="fancy-btn open">More Details</button>
                                 </div>
                             </div>
                         </div>
@@ -888,42 +887,17 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="column">-->
-                            <!--<div class="card">-->
-                                <!--<img src="images/solv/team/size-/Micheal.png" alt="Author image" class="testimonials__avatar"-->
-                                     <!--style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);">-->
-                                <!--<div class="container">-->
-                                    <!--<h2>Christian Broderic</h2>-->
-                                    <!--<p class="title">CTO</p>-->
-                                    <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>-->
-                                    <!--<p>example@example.com</p>-->
-
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="column">-->
-                            <!--<div class="card">-->
-                                <!--<img src="images/solv/team/size-/ali_Zain.jpg" alt="Ali Zain - Head Developer" class="testimonials__avatar"-->
-                                     <!--style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);">-->
-                                <!--<div class="container">-->
-                                    <!--<h2>Ali Aain</h2>-->
-                                    <!--<p class="title">Head Developer</p>-->
-                                    <!--<p>Some text that describes me lorem ipsum ipsum lorem.</p>-->
-                                    <!--<p>example@example.com</p>-->
-
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
                     </div>
                 </div>
             </div><!-- end testimonials -->
+
+
 
 
         </div> <!-- end col-full -->
     </div> <!-- end client-testimonials -->
 
 </section> <!-- end s-clients -->
-
 
 <!-- contact
 ================================================== -->
@@ -1028,6 +1002,21 @@
 
 </footer>
 
+<div class="modal-frame">
+    <div class="modal">
+        <div class="modal-inset">
+            <div class="button close"><i class="fa fa-close"></i></div>
+
+            <div class="modal-body">
+                <h3>Such Modal, Much Animate!</h3>
+                <p>Nothing groundbreaking, but I hope you enjoyed <br /> the physics for the open/close animation =).</p>
+                <p class="ps">**I know the SASS is a bit messy, I did this on the fly and for fun <br /> and w.e. I DO WHAT I WANT!!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
+
 <!-- photoswipe background
 ================================================== -->
 <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
@@ -1071,55 +1060,10 @@
 
     </div>
 
+
 </div> <!-- end photoSwipe background -->
 
 
-
-<!-- The Modal -->
-<!--<div id="id02" class="modal">-->
-
-
-    <!--&lt;!&ndash; Modal Content &ndash;&gt;-->
-
-    <!--<form class="modal-content animate" action="/action_page.php">-->
-        <!--<div align="center">-->
-            <!--<div id="id02" class="w3-modal">-->
-                <!--<div class="w3-modal-content">-->
-  <!--<span onclick="document.getElementById('id02').style.display='none'"-->
-        <!--class="close" title="Close Modal">X</span>-->
-                    <!--<header class="w3-container w3-teal">-->
-                        <!--<section class="container">-->
-                            <!--<div class="login">-->
-                                <!--<h2><br>Register</h2>-->
-                                <!--<form method="post" action="index.html">-->
-                                    <!--<p><input type="text" name="login" value="" placeholder="Full Name" size="45"></p>-->
-                                    <!--<p><input type="text" name="login" value="" placeholder="Email" size="45"></p>-->
-                                    <!--<p><input type="text" name="login" value="" placeholder="Country of Residence"-->
-                                              <!--size="45"></p>-->
-                                    <!--<p><input type="password" name="password" value="" placeholder="Password" size="45">-->
-                                    <!--</p>-->
-                                    <!--<p><input type="password" name="password" value="" placeholder="Repeat Password"-->
-                                              <!--size="45"></p>-->
-                                    <!--<p class="remember_me">-->
-
-                                    <!--</p>-->
-                                    <!--<a href="#" class="btn btn&#45;&#45;stroke">-->
-                                        <!--Register-->
-                                    <!--</a></p>-->
-                                    <!--</form>-->
-                            <!--</div>-->
-                        <!--</section>-->
-                    <!--</header>-->
-<!--</div>-->
-
-
-<!--<div class="login-help">-->
-    <!--<p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>-->
-<!--</div>-->
-<!--</div>-->
-            <!--</div>-->
-        <!--</form>-->
-    <!--</div>-->
 
 <!-- preloader
 ================================================== -->
@@ -1132,20 +1076,40 @@
 
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="js/jquery.countdown.js"></script>
 
 
 <script>
+    $('document').ready(function() {
+        var $modal = $('.modal-frame');
+        var $overlay = $('.modal-overlay');
+
+        /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+        $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+            if($modal.hasClass('state-leave')) {
+                $modal.removeClass('state-leave');
+            }
+        });
+
+        $('.close').on('click', function(){
+            $overlay.removeClass('state-show');
+            $modal.removeClass('state-appear').addClass('state-leave');
+        });
+
+        $('.open').on('click', function(){
+            $overlay.addClass('state-show');
+            $modal.removeClass('state-leave').addClass('state-appear');
+        });
+
+    });
     // Get the modal
-    var modal = document.getElementById('id01');
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-
-    }
+//    window.onclick = function (event) {
+//        if (event.target == modal) {
+//            modal.style.display = "none";
+//        }
+//
+//    }
 </script>
 
 
