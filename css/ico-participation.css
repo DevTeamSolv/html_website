@@ -87,14 +87,13 @@ width: 50%;
     justify-content: center; }
 .calculator .calculator-main .right .sol-logo .sol-button button {
     width: 150px;
-    background: #5EBB46;
-    outline: none;
-    border: 1px solid #5EBB46;
-    border-radius: 30px;
-    color: #ffffff;
-    height: 40px;
-    cursor: pointer;
-line-height: 1.15}
+    background: transparent !important;
+    border: 0.2rem solid #5DBC46;
+    color: #5DBC46;
+    height: 50px;
+    filter: drop-shadow(5px 5px 5px #222);
+    font-size: 1.2rem;
+margin-top: 20px}
 .col-full{
     text-align: center;
 }
