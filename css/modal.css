@@ -29,8 +29,8 @@ h1 {
 
 
 
-    
-    
+
+
     /* .modal .modal-popout-bg {
     background: url("../images/solv/landscape-forest-abstract-3D-render-green-hills-pattern-texture-jungle-wireframe-leaf-design-line-screenshot-soil-computer-wallpaper-fractal-art-font-ecosystem-107319.png"); */
 }
@@ -40,7 +40,7 @@ h1 {
     /* Position it in the top right corner outside of the modal */
     position: absolute;
     border-left: 25px;
-    top: 0; 
+    top: 0;
     color: #000;
     font-size: 35px;
     font-weight: bold;
@@ -60,12 +60,12 @@ h1 {
 }
 
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
+    from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
 }
 
 @keyframes animatezoom {
-    from {transform: scale(0)} 
+    from {transform: scale(0)}
     to {transform: scale(1)}
 }
 
