@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+<div>
+
+    <div className="row_51 sign-up-in animated-scroll">
+
+        <Link to="/">Home</Link>
+
+    </div>
+    <div className="login">
+        <div>
+            <div className="container">
+                <img src={require("../../images/logo-text2.png")}/>
+                <div className="form">
+                    <div className={this.state.email && this.props.signInSuccess !== "invalid" ? "my-row" : "my-row error"}>
+                    <div className="my-label"><p>ETH Address <span> *Invalid ETH Address</span> </p></div>
+                    <div className="input">
+                        <input onFocus={this.handleFocus.bind(this, "email")} value={this.props.email} onChange={this.props.changeEmail} placeholder="Enter your ETH address" />
+                    </div>
+                </div>
+
+                <div className="last-row">
+                    <Button type="primary" loading={this.props.loading} onClick={this.props.signIn}>
+                        Sign In
+                    </Button>
+                </div>
+            </div>
+        </div>
+        <div className="bottom-last-row">
+            <div className="login-line">
+                <p><Link to="signup">Sign Up</Link> if you are not registered yet.</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css"/>
+</head>
+<body>
+<div>
+    <div className="row_51 sign-up-in animated-scroll">
+
+        <Link to="/">Home</Link>
+
+    </div>
+    <div className="sign-up">
+        <div>
+            <div className="container">
+                <img src={require("../../images/logo-text2.png")}/>
+                <div className="form">
+                    <div className="row-1">
+                        <div className={this.state.fName ? "my-row my-row1" : "my-row my-row1 error"}>
+                        <div className="my-label"><p>First Name <span> *required</span></p></div>
+                        <div className="input">
+                            <input onFocus={this.handleFocus.bind(this, "fname")} onChange={this.props.changeFirstName} value={this.props.fName} placeholder="Enter your First name" />
+                        </div>
+                    </div>
+                    <div className={this.state.lName ? "my-row my-row2" : "my-row my-row2 error"}>
+                    <div className="my-label"><p>Last Name <span> *required</span></p></div>
+                    <div className="input">
+                        <input onFocus={this.handleFocus.bind(this, "lname")} onChange={this.props.changeLastName}  value={this.props.lName} placeholder="Enter your Last name" />
+                    </div>
+                </div>
+            </div>
+            <div className={(this.state.email &&  this.props.signUpSuccess !== "email" ) ? "my-row" : "my-row error"}>
+            <div className="my-label"><p>Email {!this.state.email && <span> *Invalid Email Address</span>} {this.state.email && this.props.signUpSuccess === "email" && <b><span className="already"> **Already registered</span></b>}</p></div>
+            <div className="input">
+                <input onFocus={this.handleFocus.bind(this, "email")}  onChange={this.props.changeEmail} value={this.props.email} placeholder="Enter your Email address" />
+            </div>
+        </div>
+        <div className={(this.state.ethAddress &&  this.props.signUpSuccess !== "address" ) ? "my-row" : "my-row error"}>
+        <div className="my-label"><p>Ethereum Address {!this.state.ethAddress && <span> *required</span>} {this.state.ethAddress && this.props.signUpSuccess ==="address" && <b><span className="already"> **Already registered</span></b>}</p></div>
+        <div className="input">
+            <input onFocus={this.handleFocus.bind(this, "ethAddress")}  onChange={this.props.changeEthAddress} value={this.props.ethAddress} placeholder="Enter your ETH address" />
+        </div>
+    </div>
+    <div className={this.state.ethAmount ? "my-row" : "my-row error"}>
+    <div className="my-label"><p className="eth-amount">How much ETH you would like to participate with? <span> *required</span></p></div>
+    <div className="input">
+        <input onFocus={this.handleFocus.bind(this, "ethAmount")}  onChange={this.props.changeAmount} value={this.props.ethAmount} type="number" placeholder="Enter ETH amount" min={0}/>
+    </div>
+</div>
+<div className={(this.props.signUpSuccess !== "invalid_ref" ) ? "my-row" : "my-row error"}>
+<div className="my-label"><p>Referral Code {this.props.signUpSuccess !== "invalid_ref" && <span className="opactiy-one"> *optional</span>}{this.props.signUpSuccess === "invalid_ref" && <span className="already"> **<b>wrong referral code</b></span>}</p></div>
+<div className="input">
+    <input   onChange={this.props.changeCode} value={this.props.reffCode} placeholder="Enter referral code"/>
+</div>
+</div>
+<div className={this.state.checked ? "last-row" : "last-row error"}>
+<div className="checkbox">
+    <input value={this.state.checkBox} onChange={this.handleCheckBox.bind(this)} type="checkbox"/><p>I understand to follow all rules and regulations within my country, state and territory and have read the whitepaper thoroughly. </p>
+</div>
+<p className="note"><b>Note: </b>Please remember ETH address you used here, this will be required for Sign In.</p>
+<Button type="primary" loading={this.props.loading} onClick={this.login.bind(this)}>
+    Sign Up
+</Button>
+</div>
+</div>
+</div>
+<div className="bottom-last-row">
+    <div className="login-line">
+        <p><Link to="signin">Login</Link> if you already registered.</p>
+    </div>
+</div>
+</div>
+    </div>
+    </div>
+</body>
+</html>
