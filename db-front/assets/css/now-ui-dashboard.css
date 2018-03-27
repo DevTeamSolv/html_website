@@ -3597,6 +3597,68 @@ Created using IcoMoon - icomoon.io
 
 .signup-error{
   color: red;
+  font-size: 13px;
 }
 
+
+.signup-form{
+  width: 700px;
+  margin: 0px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.signup-form .heading{
+  padding: 10px 0px;
+}
+
+.signup-form .heading h1{
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+
+
+.signup-form .signup-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+}
+
+.signup-form .signup-row .name{
+  display: block;
+  width: 47%;
+}
+
+.signup-form .signup-row .Email{
+  display: block;
+  width: 100%;
+}
+
+.signup-form .signup-row p{
+  margin: 0px;
+  padding-bottom: 5px;
+  opacity: .7;
+}
+
+.signup-form .signup-row  input{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #BDBDBD;
+  text-indent: 20px;
+
+}
+
+.signup-form .signup-row  input::placeholder{
+  color: black;
+  opacity: .5;
+  font-size: 14px;
+
+}
 /*# sourceMappingURL=now-ui-dashboard.css.map */
