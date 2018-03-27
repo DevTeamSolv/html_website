@@ -2865,6 +2865,23 @@ Created using IcoMoon - icomoon.io
 .panel-header-lg {
   height: 380px; }
 
+.signup-submit{
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
+.signup-submit button{
+  width: 150px;
+  height: 40px;
+  background: transparent !important;
+  border: 0.2rem solid #777777;
+  color: #777777;
+  filter: drop-shadow(5px 5px 5px #222);
+  cursor: pointer;
+}
+
+
+
 .card {
   padding-bottom: 20px;
   border: 0;
@@ -3534,6 +3551,9 @@ Created using IcoMoon - icomoon.io
     padding-right: 15px; } }
 
 @media screen and (max-width: 768px) {
+  .card-width{
+    width: 90%;
+  }
   .nav-tabs {
     display: inline-block;
     width: 100%;
@@ -3574,5 +3594,9 @@ Created using IcoMoon - icomoon.io
       font-size: 48px; }
   .page-header .container h6.category-absolute {
     width: 90%; } }
+
+.signup-error{
+  color: red;
+}
 
 /*# sourceMappingURL=now-ui-dashboard.css.map */
