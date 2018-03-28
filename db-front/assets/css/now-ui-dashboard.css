@@ -3642,6 +3642,8 @@ Created using IcoMoon - icomoon.io
   margin: 0px;
   padding-bottom: 5px;
   opacity: .7;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .signup-form .signup-row  input{

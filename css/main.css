@@ -85,7 +85,13 @@ display: inline;
 html {
     font-size: 10px;
 }
-
+.adjustment {
+    padding-top: 125px !important;
+}
+.wrapper .main-panel {
+    background-image: url("../images/bg.jpg");
+    background-position: center;
+}
 @media only screen and (max-width: 400px) {
     html {
         font-size: 9.411764705882353px;
