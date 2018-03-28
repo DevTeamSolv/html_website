@@ -124,7 +124,7 @@
                 </div>
                 <div class="signup-row">
                     <div class="signup-submit">
-                        <button>SUBMIT</button>
+                        <button id="submit">SUBMIT</button>
                     </div>
                 </div>
             </div>
@@ -155,6 +155,32 @@
         </footer>
     </div>
 </div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+            $.fn.myfunction = function() {
+                alert('hello world');
+                return this;
+            };
+        })( jQuery );
+//        $.fn.myFunc = function () {
+//            alert('hello world');
+//            return this;
+//        }
+        $('#submit').on('click', function () {
+            myfunction();
+        })
+
+    })
+
+
+
+
+</script>
+
+
+
 
 </body>
 </html>
