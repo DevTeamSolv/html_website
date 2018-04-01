@@ -1,7 +1,9 @@
 .login .heading {
   margin-bottom: 30px; }
+
 .login .content {
   min-height: calc(100vh + 140px) !important; }
+
 .login .login-row form .name {
   display: flex;
   flex-direction: column; }
@@ -21,26 +23,30 @@
     outline: none;
     border: 1px solid #BDBDBD;
     text-indent: 20px; }
+
 .login .login-row .empty-input input {
   border: 1px solid red !important; }
+
 .login .login-row .empty-input p {
   color: red !important; }
   .login .login-row .empty-input p span.empty {
     display: inline-block !important; }
+
 .login .login-row .invalid-address input {
   border: 1px solid red !important; }
+
 .login .login-row .invalid-address p {
   color: red !important; }
   .login .login-row .invalid-address p span.invalid {
     display: inline-block !important; }
+
 .login .signup-row {
   height: auto !important;
   display: flex;
   justify-content: center !important; }
+
 .login .signup-submit {
   margin: 0px; }
   .login .signup-submit button {
     height: auto !important;
     font-size: 1.6rem !important; }
-
-/*# sourceMappingURL=login.css.map */

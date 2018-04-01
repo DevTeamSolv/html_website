@@ -23,6 +23,14 @@
   }
 }
 
+.signup-submit{
+  button{
+    line-height: calc(4.2rem - .4rem) !important;
+  }
+}
+
+
+
 .sign-up {
 
   background-image: url("../../../images/wallpaperbg.png");
@@ -56,7 +64,7 @@
           transform: translate(0px, 0%) rotate(270deg) scale(1.5, 1.5);
         }
         #ell {
-          fill: #77777712 !important;
+          fill: #777777 !important;
           stroke: #5dbb46;
         }
         .time {
@@ -81,7 +89,7 @@
     padding: 50px;
     width: 60%;
     border-radius: 5px;
-    box-shadow: 0 1px 10px 1px #60676059;
+    box-shadow: 0 1px 10px 1px #606760;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -322,7 +330,7 @@
             transform: translate(0px, 0%) rotate(270deg) scale(1.3, 1.3);
           }
           #ell {
-            fill: #77777712 !important;
+            fill: #777777 !important;
             stroke: #5dbb46;
           }
           .time {
@@ -404,7 +412,7 @@
             transform: translate(0px, 0%) rotate(270deg) scale(1.2, 1.2);
           }
           #ell {
-            fill: #77777712 !important;
+            fill: #777777 !important;
             stroke: #5dbb46;
           }
           .time {
@@ -469,6 +477,13 @@
   }
 }
 
+@media only screen and (min-width: 601px){
+  .signup-row-mobile{
+    display: none !important;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
   .sign-up {
     padding: 100px 50px;
@@ -494,7 +509,7 @@
             transform: translate(0px, 0%) rotate(270deg) scale(1, 1);
           }
           #ell {
-            fill: #77777712 !important;
+            fill: #777777 !important;
             stroke: #5dbb46;
           }
           .time {
@@ -561,6 +576,32 @@
       }
     }
   }
+  .signup-row-desktop{
+    display: none !important;
+  }
+  .signup-row-mobile{
+    display: block;
+    .name{
+      p{
+        margin: 0px;
+        padding-bottom: 5px;
+        opacity: .7;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .signup-error{
+        display: none;
+      }
+      input{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: 1px solid #BDBDBD;
+        text-indent: 20px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -588,7 +629,7 @@
             transform: translate(0px, 0%) rotate(270deg) scale(0.82, 0.82);
           }
           #ell {
-            fill: #77777712 !important;
+            fill: #777777 !important;
             stroke: #5dbb46;
           }
           .time {
@@ -655,7 +696,7 @@
             transform: translate(0px, 0%) rotate(270deg) scale(0.72, 0.72);
           }
           #ell {
-            fill: #77777712 !important;
+            fill: #777777 !important;
             stroke: #5dbb46;
           }
           .time {

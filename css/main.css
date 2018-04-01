@@ -75,7 +75,7 @@ display: inline;
 
 
 #name_error1,#name_error2 {
-    visibility: hidden;
+    display: none;
 }
 #email_error1 , #email_error2 ,#eth_error , #ethamout_error1 ,#ethamout_error2 {
     display: none;
