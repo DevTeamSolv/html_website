@@ -1,32 +1,52 @@
-.login {
+#login {
+  min-height: calc(100vh + 240px) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   .heading {
     margin-bottom: 30px;
   }
   .content {
-  min-height: calc(100vh + 140px) !important;
+  min-height: calc(400px) !important;
+    background: #fff;
+    border-radius: 20px;
+    width: 50%;
+    margin: 0px auto;
+  }
+  .adjustment {
+    padding: 50px 0 !important;
+  }
+  .s-header {
+    position: relative;
   }
   .login-row {
-    form .name {
+    form {
+
       display: flex;
       flex-direction: column;
-      p {
-        margin: 0px;
-        padding-bottom: 5px;
-        opacity: .7;
-        text-align: left;
-        padding-left: 20px;
-        span {
-          display: none;
+      justify-content: center;
+      align-items: center;
+      .name {
+        p {
+          margin: 0px;
+          padding-bottom: 5px;
+          opacity: .7;
+          text-align: left;
+          padding-left: 20px;
+          span {
+            display: none;
+          }
         }
-      }
-      input {
-        display: block;
-        width: 100%;
-        height: 50px;
-        border-radius: 50px;
-        outline: none;
-        border: 1px solid #BDBDBD;
-        text-indent: 20px;
+        input {
+          display: block;
+          width: 460px;
+          height: 50px;
+          border-radius: 50px;
+          outline: none;
+          border: 1px solid #BDBDBD;
+          text-indent: 20px;
+        }
       }
     }
     .empty-input {
@@ -62,7 +82,11 @@
     button {
       height: auto !important;
       font-size: 1.6rem !important;
+      color: #c5c5c5;
       //border-radius: 26px;
+    }
+    button:hover {
+      color: #000;
     }
   }
 }
