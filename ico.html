@@ -347,7 +347,7 @@
             $('.countdown').final_countdown({
                 start: '1521936000',
                 end: '1524528000',
-                now: '1521936000'
+                now: Math.floor(Date.now() / 1000)
             });
         });
 
