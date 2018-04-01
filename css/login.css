@@ -46,6 +46,8 @@
   #login .login-row .invalid-address input {
     border: 1px solid red !important; }
   #login .login-row .invalid-address p {
+
+
     color: red !important; }
     #login .login-row .invalid-address p span.invalid {
       display: inline-block !important; }
