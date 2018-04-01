@@ -74,7 +74,7 @@ display: inline;
 }
 
 
-#name_error {
+#name_error1,#name_error2 {
     visibility: hidden;
 }
 #email_error1 , #email_error2 ,#eth_error , #ethamout_error1 ,#ethamout_error2 {
@@ -84,8 +84,18 @@ display: inline;
 .p1{
     font-size: 20px;
 }
-
-
+.signup-error{
+    font-size: 1.7rem !important;
+}
+.required_error {
+    color: red !important;
+}
+.required_error input {
+    border: 1px solid red !important;
+}
+.signup-form .signup-row p {
+    float: left;
+}
 
 
 html {

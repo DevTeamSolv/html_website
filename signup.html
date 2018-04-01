@@ -71,44 +71,42 @@
                 <br/>
                 <div class="signup-row">
                     <div class="name">
-                        <p class="signup-error" id="name_error">Please Enter First Name and Last Name</p>
                         <p>First Name</p>
+                        <p class="signup-error" id="name_error1"><b>* Required</b></p>
                         <input id="fName" type="text" placeholder="First Name" required>
                     </div>
                     <div class="name">
-                        <br>
                         <p>Last Name</p>
+                        <p class="signup-error" id="name_error2"><b>* Required</b></p>
                         <input id="lName" type="text" placeholder="Last Name" required>
                     </div>
                 </div>
                 <div class="signup-row">
-                    <div class="Email">
-
+                    <div class="Email emails">
                         <p>Email</p>
-                        <p class="signup-error" id="email_error1">Enter Email Address</p>
-                        <p class="signup-error" id="email_error2">Invalid Email Address</p>
+                        <p class="signup-error" id="email_error1"><b>* Required</b></p>
+                        <p class="signup-error" id="email_error2"><b>* Invalid Email Address</b></p>
                         <input id="email" type="text" placeholder="Email" aria-describedby="name-format" required>
                     </div>
                 </div>
                 <div class="signup-row">
-                    <div class="Email">
+                    <div class="Email ethaddress">
                         <p>Eth-Address</p>
-                        <p class="signup-error" id="eth_error">Enter Eth Address</p>
+                        <p class="signup-error" id="eth_error"><b>* Required</b></p>
                         <input id="ethAddress" type="text" placeholder="0xabc12344332">
                     </div>
                 </div>
                 <div class="signup-row">
-                    <div class="Email">
+                    <div class="Email ethamount">
                         <p>Eth-Amount</p>
-                        <p class="signup-error" id="ethamout_error1"><b>* Required</b></p>
-                        <p class="signup-error" id="ethamout_error2">Enter only Number</p>
+                        <p class="signup-error" id="ethamout_error1"><b>* Required * Enter Eth Amount that you want to Participate in ICO</b></p>
+                        <p class="signup-error" id="ethamout_error2"><b>Enter only Number</b></p>
                         <input id="ethAmount" type="text" placeholder="123">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p>Referral Code</p>
-
                         <input id="reffCode" type="text" placeholder="Refferral Code (Optional)">
                     </div>
                 </div>
@@ -150,46 +148,65 @@
             var eth_amount = $('#ethAmount').val();
             var eth_address = $('#ethAddress').val();
             var ref_code = $('#reffCode').val();
-            if (first_name == "" || last_name == "") {
-                document.getElementById("name_error").style.visibility="visible";
+            if (first_name == "") {
+                document.getElementById("name_error1").style.visibility="visible";
+                $('.name').addClass('required_error');
             }
             else{
-                document.getElementById("name_error").style.visibility="hidden";
+                document.getElementById("name_error1").style.visibility="hidden";
+                $('.name').removeClass('required_error');
+            }
+
+            if (last_name == "") {
+                document.getElementById("name_error2").style.visibility="visible";
+                $('.name').addClass('required_error');
+            }
+            else{
+                document.getElementById("name_error2").style.visibility="hidden";
+                $('.name').removeClass('required_error');
             }
 
             if(email == ""){
                 document.getElementById("email_error1").style.display="block";
+                $('.emails').addClass('required_error');
             }
             else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
             {
+                $('.emails').addClass('required_error');
                 document.getElementById("email_error2").style.display="block";
                 document.getElementById("email_error1").style.display="none";
             }
             else{
                 document.getElementById("email_error1").style.display="none";
                 document.getElementById("email_error2").style.display="none";
+                $('.emails').removeClass('required_error');
             }
 
 
             if(eth_address == ""){
+                $('.ethaddress').addClass('required_error');
                 document.getElementById("eth_error").style.display="block";
             }
             else {
+                $('.ethaddress').removeClass('required_error');
                 document.getElementById("eth_error").style.display="none";
             }
             if(eth_amount == ""){
+                $('.ethamount').addClass('required_error');
                 document.getElementById("ethamout_error1").style.display="block";
             }
             else if (isNaN(eth_amount)){
+                $('.ethamount').addClass('required_error');
                 document.getElementById("ethamout_error1").style.display="none";
                 document.getElementById("ethamout_error2").style.display="block";
             }
             else {
+                $('.ethamount').removeClass('required_error');
                 document.getElementById("ethamout_error1").style.display="none";
                 document.getElementById("ethamout_error2").style.display="none";
             }
 
-          //  console.log(first_name)
+            //  console.log(first_name)
 
 
 //            var settings = {
