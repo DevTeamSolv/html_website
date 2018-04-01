@@ -1,0 +1,15 @@
+.home-content h2{
+    font-size: 4rem;
+}
+.home-content p{
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+.home-content__main{
+    width: 60%;
+    padding-top: 10rem;
+}
+.countdown-container{
+    margin: 30px 0px 25px 0px;
+}
