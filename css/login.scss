@@ -1,3 +1,6 @@
+html {
+  -moz-transform: scale(1) !important;
+}
 #login {
   min-height: calc(100vh + 240px) !important;
   display: flex;
