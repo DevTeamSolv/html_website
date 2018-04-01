@@ -4,43 +4,149 @@
     <meta charset="UTF-8">
     <title>Log In</title>
     <link rel="stylesheet" href="css/login.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="db-front/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="db-front/assets/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="db-front/assets/demo/demo.css" rel="stylesheet" />
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <link rel="stylesheet" href="css/updated.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 <div>
 
-    <div className="row_51 sign-up-in animated-scroll">
+    <div class="wrapper ">
 
-        <Link to="/">Home</Link>
+    <div class="login main-panel">
 
-    </div>
-    <div className="login">
-        <div>
-            <div className="container">
-                <img src={require("../../images/logo-text2.png")}/>
-                <div className="form">
-                    <div className={this.state.email && this.props.signInSuccess !== "invalid" ? "my-row" : "my-row error"}>
-                    <div className="my-label"><p>ETH Address <span> *Invalid ETH Address</span> </p></div>
-                    <div className="input">
-                        <input onFocus={this.handleFocus.bind(this, "email")} value={this.props.email} onChange={this.props.changeEmail} placeholder="Enter your ETH address" />
+        <!-- End Navbar -->
+        <header class="s-header">
+            <div class="header-logo">
+                <a class="site-logo" href="index.html">
+                    <img src="images/solv/gifs/gif-faster-smaller.gif" alt="Homepage" height="60" width="60">
+                </a>
+
+            </div>
+            <!--Removed menu for now <DIV>-->
+            <div class="big-desktop-view nav-bar-cont">
+                <div class="nav-bar">
+                    <a href="index.html" class="btn nav-bar-a">Home</a>
+                    <a href="ico.html" class="btn nav-bar-a">Participate</a>
+                    <a href="human.html" class="btn nav-bar-a">Operation Humanity</a>
+                    <a href="business.html" class="btn nav-bar-a">Start Your Business</a>
+                    <!--<a href="dashboard.html" class="btn nav-bar-a">Dashboard</a>-->
+                    <a href="market.html" class="btn nav-bar-a">Marketplace</a>
+                    <a href="mart/index.html" class="btn nav-bar-a">Merchandise</a>
+                    <a href="games.html" class="btn nav-bar-a">Street QR Game</a>
+                </div>
+            </div>
+            <!--</DIV>-->
+
+        </header> <!-- end s-header -->
+
+        <div class=" content adjustment">
+            <div class="signup-form">
+                <div class="heading">
+                    <h1>Sign In</h1>
+                </div>
+                <div class="login-row">
+                    <form>
+                        <div class="name">
+                            <p>Eth Address &nbsp;<span class="empty"><b>*Required</b></span><span class="invalid"><b>*Inavlid Address</b></span></p>
+                            <input id="ethAddress" type="text" placeholder="Enter your Ethereum Address" required>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="signup-row">
+                    <div class="signup-submit">
+                        <button id="submit">Sign In</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <footer class="footer">
 
-                <div className="last-row">
-                    <Button type="primary" loading={this.props.loading} onClick={this.props.signIn}>
-                        Sign In
-                    </Button>
-                </div>
-            </div>
-        </div>
-        <div className="bottom-last-row">
-            <div className="login-line">
-                <p><Link to="signup">Sign Up</Link> if you are not registered yet.</p>
-            </div>
-        </div>
+
+            <p>All rights reserved by Ingram Enterprise & Co Pty ltd 2016 in ownership of Solution Token and Solv apparel 2018.
+                ACN 613 808 727 ABN 52 613 808 727</p>
+
+
+        </footer>
+
     </div>
-
+</div>
 
 </div>
 </div>
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#submit').on('click', function () {
+            var eth_address = $('#ethAddress');
+            var label = $('.name p');
+            var errMessage = $('.name p span');
+//            console.log(eth_address.val())
+
+            if(eth_address.val() == "") {
+                $('.name').addClass('empty-input');
+            }
+            else {
+                $('.name').removeClass('invalid-address');
+                $('.name').removeClass('empty-input');
+console.log(eth_address.val())
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "http://54.210.73.187:8000/api/login",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                    },
+                    "processData": false,
+                    "data": JSON.stringify({ eth_address : eth_address.val() })
+                }
+                console.log(settings)
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    if(response.message == "invalid") {
+                        $('.name').addClass('invalid-address');
+                    }
+                });
+            }
+
+
+        })
+    })
+
+
+
+
+</script>
+
 </body>
 </html>
