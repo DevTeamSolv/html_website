@@ -68,43 +68,48 @@
                 <div class="heading">
                     <h1>SIGN UP</h1>
                 </div>
+                <br/>
                 <div class="signup-row">
                     <div class="name">
+                        <p class="signup-error" id="name_error">Please Enter First Name and Last Name</p>
                         <p>First Name</p>
-                        <input type="text" placeholder="First Name" required>
+                        <input id="fName" type="text" placeholder="First Name" required>
                     </div>
                     <div class="name">
+                        <br>
                         <p>Last Name</p>
-                        <input type="text" placeholder="Last Name" required>
+                        <input id="lName" type="text" placeholder="Last Name" required>
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
-                        <p class="signup-error">Invalid Email Address</p>
-                        <p>Email</p>
 
-                        <input type="text" placeholder="Email" aria-describedby="name-format" required>
+                        <p>Email</p>
+                        <p class="signup-error" id="email_error1">Enter Email Address</p>
+                        <p class="signup-error" id="email_error2">Invalid Email Address</p>
+                        <input id="email" type="text" placeholder="Email" aria-describedby="name-format" required>
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p>Eth-Address</p>
-
-                        <input type="text" placeholder="0xabc12344332">
+                        <p class="signup-error" id="eth_error">Enter Eth Address</p>
+                        <input id="ethAddress" type="text" placeholder="0xabc12344332">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p>Eth-Amount</p>
-
-                        <input type="text" placeholder="123">
+                        <p class="signup-error" id="ethamout_error1">Enter Eth Amount that you want to Participate in ICO</p>
+                        <p class="signup-error" id="ethamout_error2">Enter only Number</p>
+                        <input id="ethAmount" type="text" placeholder="123">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p>Referral Code</p>
 
-                        <input type="text" placeholder="Refferral Code">
+                        <input id="reffCode" type="text" placeholder="Refferral Code (Optional)">
                     </div>
                 </div>
                 <div class="signup-row">
@@ -133,18 +138,58 @@
 <script>
     $(document).ready(function () {
 
+
 //        $.fn.myFunc = function () {
 //            alert('hello world');
 //            return this;
 //        }
         $('#submit').on('click', function () {
-//            var first_name = $('#fName').val();
-//            var last_name = $('#lName').val();
-//            var email = $('#email').val();
-//            var eth_amount = $('#ethAmount').val();
-//            var eth_address = $('#ethAddress').val();
-//            var ref_code = $('#reffCode').val();
-//            console.log(first_name, last_name, email, eth_address, eth_amount, ref_code)
+            var first_name = $('#fName').val();
+            var last_name = $('#lName').val();
+            var email = $('#email').val();
+            var eth_amount = $('#ethAmount').val();
+            var eth_address = $('#ethAddress').val();
+            var ref_code = $('#reffCode').val();
+            if (first_name == "" || last_name == "") {
+                document.getElementById("name_error").style.visibility="visible";
+            }
+            else{
+                document.getElementById("name_error").style.visibility="hidden";
+            }
+
+            if(email == ""){
+                document.getElementById("email_error1").style.display="block";
+            }
+            else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
+            {
+                document.getElementById("email_error2").style.display="block";
+                document.getElementById("email_error1").style.display="none";
+            }
+            else{
+                document.getElementById("email_error1").style.display="none";
+                document.getElementById("email_error2").style.display="none";
+            }
+
+
+            if(eth_address == ""){
+                document.getElementById("eth_error").style.display="block";
+            }
+            else {
+                document.getElementById("eth_error").style.display="none";
+            }
+            if(eth_amount == ""){
+                document.getElementById("ethamout_error1").style.display="block";
+            }
+            else if (isNaN(eth_amount)){
+                document.getElementById("ethamout_error1").style.display="none";
+                document.getElementById("ethamout_error2").style.display="block";
+            }
+            else {
+                document.getElementById("ethamout_error1").style.display="none";
+                document.getElementById("ethamout_error2").style.display="none";
+            }
+
+          //  console.log(first_name)
 
 
 //            var settings = {
