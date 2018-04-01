@@ -80,6 +80,29 @@
 #login .signup-submit button:hover {
   color: #000; }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #login .adjustment {
-    width: 90%; } }
+    width: 90%; }
+  #login .login-row form .name {
+    width: 90%;
+    margin: 0px auto; }
+  #login .login-row form .name input {
+    width: 100%; } }
+
+@media only screen and (max-width: 600px) {
+  #login .adjustment {
+    width: 80%; }
+  #login .login-row form .name {
+    width: 90%;
+    margin: 0px auto; }
+  #login .login-row form .name input {
+    width: 100%; } }
+
+@media only screen and (max-width: 780px) {
+  #login .adjustment {
+    width: 70%; }
+  #login .login-row form .name {
+    width: 90%;
+    margin: 0px auto; }
+  #login .login-row form .name input {
+    width: 100%; } }
