@@ -40,8 +40,8 @@
                         <div class="input-group no-border">
                             <input type="text" value="" class="form-control" placeholder="Search...">
                             <span class="input-group-addon">
-                                    <i class="now-ui-icons ui-1_zoom-bold"></i>
-                                </span>
+                                <i class="now-ui-icons ui-1_zoom-bold"></i>
+                            </span>
                         </div>
                     </form>
                     <ul class="navbar-nav">
@@ -89,37 +89,37 @@
                 <div class="signup-row">
                     <div class="name">
                         <p>First Name</p>
-                        <input type="text" placeholder="First Name">
+                        <input id="fName" type="text" placeholder="First Name">
                     </div>
                     <div class="name">
                         <p>Last Name</p>
-                        <input type="text" placeholder="Last Name">
+                        <input id="lName" type="text" placeholder="Last Name">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p class="signup-error">Invalid Email Address</p>
                         <p>Email</p>
-                        <input type="text" placeholder="Email">
+                        <input id="email" type="text" placeholder="Email">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p class="signup-error">Enter Your Ethreum Address</p>
                         <p>Eth-Address</p>
-                        <input type="text" placeholder="Email">
+                        <input id="ethAddress" type="text" placeholder="Email">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p>Eth-Amount</p>
-                        <input type="text" placeholder="Email">
+                        <input type="text" id="ethAmount" placeholder="Eth Amount">
                     </div>
                 </div>
                 <div class="signup-row">
                     <div class="Email">
                         <p>Referral Code</p>
-                        <input type="text" placeholder="Email">
+                        <input id="reffCode" type="text" placeholder="Email">
                     </div>
                 </div>
                 <div class="signup-row">
@@ -159,19 +159,48 @@
 <script>
     $(document).ready(function () {
 
-            $.fn.myfunction = function() {
-                alert('hello world');
-                return this;
-            };
-        })( jQuery );
 //        $.fn.myFunc = function () {
 //            alert('hello world');
 //            return this;
 //        }
         $('#submit').on('click', function () {
-            myfunction();
-        })
+            var first_name = $('#fName').val();
+            var last_name = $('#lName').val();
+            var email = $('#email').val();
+            var eth_amount = $('#ethAmount').val();
+            var eth_address = $('#ethAddress').val();
+            var ref_code = $('#reffCode').val();
+            console.log(first_name, last_name, email, eth_address, eth_amount, ref_code)
 
+
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "http://54.210.73.187:8000/api/users",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                },
+                "processData": false,
+                "data": JSON.stringify({ first_name, last_name, email, eth_amount, eth_address, ref_code })
+            }
+
+//            var settings = {
+//                "url": "http://54.210.73.187:8000/api/users",
+//                "method": "POST",
+//                "headers": {
+//                    "Content-Type": "application/json",
+//                },
+//                "processData": false,
+//                "data": "{\n    \"eth_address\": \"0x0c9575e0d614B437fC4eesB340Db9622886ec0e341\",\n    \"first_name\": \"Test\",\n    \"last_name\": \"Test\",\n    \"eth_amount\": \"1\",\n    \"ref_code\": \"\",\n    \"email\": \"test@1223.com\"\n}"
+//            }
+
+            console.log(settings)
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+
+        })
     })
 
 
