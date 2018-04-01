@@ -72,9 +72,15 @@ border: 0;
 box-shadow: 0;
 display: inline;
 }
+
+
+#name_error {
+    visibility: hidden;
+}
+#email_error1 , #email_error2 ,#eth_error , #ethamout_error1 ,#ethamout_error2 {
+    display: none;
 }
 
-}
 .p1{
     font-size: 20px;
 }
