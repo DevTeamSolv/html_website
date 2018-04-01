@@ -19,18 +19,6 @@
   .sign-up-in a:hover {
     background-color: rgba(184, 187, 183, 0.18); }
 
-
-.signup-form .signup-row p{
-  float: left;
-  font-size: 1.7rem;
-}
-.required_error{
-  color: red;
-}
-.required_error input{
-  border:1px solid red !important;
-}
-
 .sign-up {
   background-image: url("../../../images/wallpaperbg.png");
   width: 100%;
