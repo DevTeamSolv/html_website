@@ -151,8 +151,8 @@
     <div class="home-content">
         <div class="row home-content__main">
             <h2>Hi</h2>
-            <h2>User Name</h2>
-            <p>You are Successfully Registered...!</p>
+            <h2 class="user-name">User Name</h2>
+            <p class="new-user">You are Successfully Registered...!</p>
             <p>Pre-Sale Start from 24 April 2018. Please Visit Again When Pre-Sale Start </p>
             <div class="countdown countdown-container">
                 <div class="clock row">
@@ -278,7 +278,7 @@
 
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
 <script type="text/javascript" src="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/js/kinetic.js"></script>
@@ -287,11 +287,22 @@
 
 <script>
     $('document').ready(function() {
+        var userName = window.location.hash.substring(1)
+        var userStatus = window.location.search;
+        console.log(userName, userStatus)
+        $('.user-name').text(userName);
+        if(userStatus == "?n=false") {
+            console.log(userStatus)
+            $('.new-user').css('display', 'none');
+        }
+
+
+
         'use strict';
         $('.countdown').final_countdown({
             start: '1521936000',
             end: '1524528000',
-            now: '1521936000'
+            now: Math.floor(Date.now() / 1000)
         });
     });
 

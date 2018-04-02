@@ -98,6 +98,7 @@
                         <p>Email</p>
                         <p class="signup-error" id="email_error1"><b>* Required</b></p>
                         <p class="signup-error" id="email_error2"><b>* Invalid Email Address</b></p>
+                        <p class="signup-error" id="email_error3"><b>* Email Already Registered</b></p>
                         <input id="email" type="text" placeholder="Email" aria-describedby="name-format" required>
                     </div>
                 </div>
@@ -105,6 +106,7 @@
                     <div class="Email ethaddress">
                         <p>Eth-Address</p>
                         <p class="signup-error" id="eth_error"><b>* Required</b></p>
+                        <p class="signup-error" id="eth_error2"><b>* Address Already Registered</b></p>
                         <input id="ethAddress" type="text" placeholder="0xabc12344332">
                     </div>
                 </div>
@@ -113,12 +115,13 @@
                         <p>Eth-Amount</p>
                         <p class="signup-error" id="ethamout_error1"><b>* Required * Enter Eth Amount that you want to Participate in ICO</b></p>
                         <p class="signup-error" id="ethamout_error2"><b>Enter only Number</b></p>
-                        <input id="ethAmount" type="text" placeholder="123">
+                        <input id="ethAmount" type="number" placeholder="123">
                     </div>
                 </div>
                 <div class="signup-row">
-                    <div class="Email">
+                    <div class="Email reff_code">
                         <p>Referral Code</p>
+                        <p class="signup-error" id="ref_err"><b>* Invalid Referral Code</b></p>
                         <input id="reffCode" type="text" placeholder="Refferral Code (Optional)">
                     </div>
                 </div>
@@ -139,6 +142,24 @@
         </footer>
 
     </div>
+
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 
@@ -153,6 +174,11 @@
 //            alert('hello world');
 //            return this;
 //        }
+
+//        $('.emails').removeClass('required_error');
+
+
+
         $('#submit').on('click', function () {
             var first_name = $('#fName').val();
             var last_name = $('#lName').val();
@@ -160,6 +186,12 @@
             var eth_amount = $('#ethAmount').val();
             var eth_address = $('#ethAddress').val();
             var ref_code = $('#reffCode').val();
+
+            $('.reff_code').removeClass('required_error');
+            document.getElementById("email_error3").style.display="none";
+            document.getElementById("eth_error2").style.display="none";
+            document.getElementById("ref_err").style.display="none";
+
             if (first_name == "") {
                 document.getElementById("name_error1").style.visibility="visible";
                 $('.name').addClass('required_error');
@@ -180,6 +212,7 @@
 
             if(email == ""){
                 document.getElementById("email_error1").style.display="block";
+                document.getElementById("email_error3").style.display="none";
                 $('.emails').addClass('required_error');
             }
             else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
@@ -187,10 +220,12 @@
                 $('.emails').addClass('required_error');
                 document.getElementById("email_error2").style.display="block";
                 document.getElementById("email_error1").style.display="none";
+                document.getElementById("email_error3").style.display="none";
             }
             else{
                 document.getElementById("email_error1").style.display="none";
                 document.getElementById("email_error2").style.display="none";
+                document.getElementById("email_error3").style.display="none";
                 $('.emails').removeClass('required_error');
             }
 
@@ -221,32 +256,42 @@
             //  console.log(first_name)
 
 
-//            var settings = {
-//                "async": true,
-//                "crossDomain": true,
-//                "url": "http://54.210.73.187:8000/api/users",
-//                "method": "POST",
-//                "headers": {
-//                    "Content-Type": "application/json",
-//                },
-//                "processData": false,
-//                "data": JSON.stringify({ first_name, last_name, email, eth_amount, eth_address, ref_code })
-//            }
-//
-////            var settings = {
-////                "url": "http://54.210.73.187:8000/api/users",
-////                "method": "POST",
-////                "headers": {
-////                    "Content-Type": "application/json",
-////                },
-////                "processData": false,
-////                "data": "{\n    \"eth_address\": \"0x0c9575e0d614B437fC4eesB340Db9622886ec0e341\",\n    \"first_name\": \"Test\",\n    \"last_name\": \"Test\",\n    \"eth_amount\": \"1\",\n    \"ref_code\": \"\",\n    \"email\": \"test@1223.com\"\n}"
-////            }
-//
-//            console.log(settings)
-//            $.ajax(settings).done(function (response) {
-//                console.log(response);
-//            });
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "http://54.210.73.187:8000/api/users",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                },
+                "processData": false,
+                "data": JSON.stringify({ first_name, last_name, email, eth_amount, eth_address, ref_code })
+            }
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                if(response.success) {
+                    console.log(location.hostname);
+                    window.location.href = "/new-copy-solv-html/dashboard.html"  + '#' + first_name;
+                }
+                else if (response.message == "email") {
+                    $('.emails').addClass('required_error');
+                    document.getElementById("email_error2").style.display="none";
+                    document.getElementById("email_error1").style.display="none";
+                    document.getElementById("email_error3").style.display="inline-block";
+                }
+                else if (response.message == "address") {
+                    $('.ethaddress').addClass('required_error');
+                    document.getElementById("eth_error2").style.display="block";
+                }
+                else if (response.message == "invalid_ref") {
+                    $('.reff_code').addClass('required_error');
+                    document.getElementById("ref_err").style.display="block";
+                }
+            })
+            .fail(function (err) {
+                console.log(err)
+            });
 
         })
     })

@@ -96,7 +96,26 @@
     </div>
 </div>
 
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
+
+
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 
@@ -135,6 +154,10 @@ console.log(eth_address.val())
                     console.log(response);
                     if(response.message == "invalid") {
                         $('.name').addClass('invalid-address');
+                    }
+                    else {
+                        console.log(location.hostname, response.user);
+                        window.location.href = "/new-copy-solv-html/dashboard.html?n=false#" + response.user.first_name;
                     }
                 });
             }

@@ -63,7 +63,7 @@
 #name_error1, #name_error2 {
   display: none; }
 
-#email_error1, #email_error2, #eth_error, #ethamout_error1, #ethamout_error2 {
+#email_error1, #email_error2, #eth_error, #eth_error2, #ref_err, #ethamout_error1, #ethamout_error2, #email_error3 {
   display: none; }
 
 .p1 {
