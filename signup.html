@@ -272,7 +272,7 @@
                 console.log(response);
                 if(response.success) {
                     console.log(location.hostname);
-                    window.location.href = "/new-copy-solv-html/dashboard.html"  + '#' + first_name;
+                    window.location.href = "/dashboard.html"  + '#' + first_name;
                 }
                 else if (response.message == "email") {
                     $('.emails').addClass('required_error');
