@@ -17,6 +17,10 @@
   -webkit-transition: all 0.2s linear 0s;
   -o-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s; }
+.select_fix{
+  margin-left: 17px;
+  width: 94% !important;
+}
 
 .sign-up-in a:hover {
   background-color: rgba(184, 187, 183, 0.18); }

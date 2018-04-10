@@ -109,13 +109,13 @@
           
                      
                  <div class="signup-row">
-                  <div class="Email emails">
-                                      <p>Wallet Type</p>
-                                <select class="full-width" id="sampleRecipientInput">
-                                <option value="NEM">NEM</option>
-                                    <option value="Ethereum">ETHEREUM</option>
-                                    <option value="Bitcoin">BITCOIN</option>
-                                </select>
+                    <div class="Email">
+                      <p>Wallet Type</p>
+                        <select class="full-width select_fix" id="sampleRecipientInput">
+                            <option value="NEM">NEM</option>
+                            <option value="Ethereum">ETHEREUM</option>
+                            <option value="Bitcoin">BITCOIN</option>
+                        </select>
                      </div>
                 </div>
                 
@@ -198,6 +198,7 @@
 
 
         $('#submit').on('click', function () {
+            var error_check = 0;
             var first_name = $('#fName').val();
             var last_name = $('#lName').val();
             var email = $('#email').val();
@@ -217,6 +218,7 @@
             else{
                 document.getElementById("name_error1").style.visibility="hidden";
                 $('.name').removeClass('required_error');
+                error_check++;
             }
 
             if (last_name == "") {
@@ -226,6 +228,7 @@
             else{
                 document.getElementById("name_error2").style.visibility="hidden";
                 $('.name').removeClass('required_error');
+                error_check++;
             }
 
             if(email == ""){
@@ -245,6 +248,7 @@
                 document.getElementById("email_error2").style.display="none";
                 document.getElementById("email_error3").style.display="none";
                 $('.emails').removeClass('required_error');
+                error_check++;
             }
 
 
@@ -255,7 +259,9 @@
             else {
                 $('.ethaddress').removeClass('required_error');
                 document.getElementById("eth_error").style.display="none";
+                error_check++;
             }
+
             if(eth_amount == ""){
                 $('.ethamount').addClass('required_error');
                 document.getElementById("ethamout_error1").style.display="block";
@@ -269,50 +275,53 @@
                 $('.ethamount').removeClass('required_error');
                 document.getElementById("ethamout_error1").style.display="none";
                 document.getElementById("ethamout_error2").style.display="none";
+                error_check++;
             }
 
             //  console.log(first_name)
+            if(error_check == 5){
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
 
+                    //"url": "https://54.210.73.187:8000/api/users",
 
-            var settings = {
-                "async": true,
-                "crossDomain": true,
+                    "url": "https://www.solutiontoken.net/api/users",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                    },
+                    "processData": false,
+                    "data": JSON.stringify({ first_name, last_name, email, eth_amount, eth_address, ref_code })
+                }
 
-                //"url": "https://54.210.73.187:8000/api/users",
-
-                "url": "https://www.solutiontoken.net/api/users",
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json",
-                },
-                "processData": false,
-                "data": JSON.stringify({ first_name, last_name, email, eth_amount, eth_address, ref_code })
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    if(response.success) {
+                        console.log(location.hostname);
+                        window.location.href = "/dashboard.html"  + '#' + first_name;
+                    }
+                    else if (response.message == "email") {
+                        $('.emails').addClass('required_error');
+                        document.getElementById("email_error2").style.display="none";
+                        document.getElementById("email_error1").style.display="none";
+                        document.getElementById("email_error3").style.display="inline-block";
+                    }
+                    else if (response.message == "address") {
+                        $('.ethaddress').addClass('required_error');
+                        document.getElementById("eth_error2").style.display="block";
+                    }
+                    else if (response.message == "invalid_ref") {
+                        $('.reff_code').addClass('required_error');
+                        document.getElementById("ref_err").style.display="block";
+                    }
+                })
+                    .fail(function (err) {
+                        console.log(err)
+                    });
             }
 
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-                if(response.success) {
-                    console.log(location.hostname);
-                    window.location.href = "/dashboard.html"  + '#' + first_name;
-                }
-                else if (response.message == "email") {
-                    $('.emails').addClass('required_error');
-                    document.getElementById("email_error2").style.display="none";
-                    document.getElementById("email_error1").style.display="none";
-                    document.getElementById("email_error3").style.display="inline-block";
-                }
-                else if (response.message == "address") {
-                    $('.ethaddress').addClass('required_error');
-                    document.getElementById("eth_error2").style.display="block";
-                }
-                else if (response.message == "invalid_ref") {
-                    $('.reff_code').addClass('required_error');
-                    document.getElementById("ref_err").style.display="block";
-                }
-            })
-            .fail(function (err) {
-                console.log(err)
-            });
+
 
         })
     })
