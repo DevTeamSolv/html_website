@@ -28,6 +28,18 @@ margin-top: 60px}
 .calculator .calculator-main .left .stats .coin-logo.eth img {
     width: 14px;
     margin-right: 10px; }
+.participating{
+    text-align: left;
+    width: 80%;
+    margin: 0px auto;
+    color: black;
+}
+.participating h3{
+    color: black;
+}
+.participating li{
+    font-size: 2rem;
+}
 .calculator .calculator-main .left .stats h3 {
     color: #ffffff;
     font-size: 20px; }

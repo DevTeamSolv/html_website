@@ -32,6 +32,10 @@
     <link rel="stylesheet" href="css/updated.css" />
     <link rel="stylesheet" href="css/popup.css" />
 
+    <link rel="stylesheet" href="ico/assets/css/updated.css">
+    <link rel="stylesheet" href="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/css/demo.css">
+    <link rel="stylesheet" href="rangeslider.js-2.3.0/rangeslider.css">
+
 
     <!-- script
     ================================================== -->
@@ -248,27 +252,71 @@
 <!-- about
 ================================================== -->
 <section id='about' class="s-about">
-    <br><br><br>
+
     <div class="row section-header has-bottom-sep">
-        <div class="col-full">
-            <h3>Are you part of the</h3>
-            <h1 class="display-1 display-1--light"
-                style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);">
-                Solution?</h1>
-        </div>
-    </div> <!-- end section-header -->
+        <h1 class="display-1 display-1--light" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);">
+            PreSale Start</h1>
+        <div class="countdown countdown-container counter_fix">
+            <div class="clock row">
+                <div class="clock-item clock-days countdown-time-value">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-days" class="clock-canvas"></div>
 
-    <div class="row about-desc">
-        <div class="col-full">
-            <p>
-                Here at Solution Token, the benefit of our users - who we hope will span across all kinds of humanity -
-                is our priority. We hope to earn your support by sharing our vision: what we are doing, why we are doing
-                it, and how we will accomplish it. For more technical details and hard numbers to help you make the most
-                well-informed decision possible.
-            </p>
+                            <div class="timer-text">
+                                <p class="val">0</p>
+                                <p class="type-days type-time">DAYS</p>
+                            </div><!-- /.text -->
+                        </div><!-- /.inner -->
+                    </div><!-- /.wrap -->
+                </div><!-- /.clock-item -->
 
+                <div class="clock-item clock-hours countdown-time-value">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-hours" class="clock-canvas"></div>
+                            <div class="timer-text">
+                                <p class="val">0</p>
+                                <p class="type-hours type-time">HOURS</p>
+                            </div><!-- /.text -->
+                        </div><!-- /.inner -->
+                    </div><!-- /.wrap -->
+                </div><!-- /.clock-item -->
+
+                <div class="clock-item clock-minutes countdown-time-value">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-minutes" class="clock-canvas"></div>
+
+                            <div class="timer-text">
+                                <p class="val">0</p>
+                                <p class="type-minutes type-time">MINUTES</p>
+                            </div><!-- /.text -->
+                        </div><!-- /.inner -->
+                    </div><!-- /.wrap -->
+                </div><!-- /.clock-item -->
+
+                <div class="clock-item clock-seconds countdown-time-value">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-seconds" class="clock-canvas"></div>
+
+                            <div class="timer-text">
+                                <p class="val">0</p>
+                                <p class="type-seconds type-time">SECONDS</p>
+                            </div><!-- /.text -->
+                        </div><!-- /.inner -->
+                    </div><!-- /.wrap -->
+                </div><!-- /.clock-item -->
+            </div><!-- /.clock -->
         </div>
+        <a href="ico.html">
+            <button onclick="document.getElementById('id02').style.display='block'" class="btn btn--stroke" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);">
+                PARTICIPATE IN OUR ICO
+            </button>
+        </a>
     </div>
+
     <!-- end about-desc -->
 
 </section> <!-- end s-about -->
@@ -1086,6 +1134,34 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+<script type="text/javascript" src="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/js/kinetic.js"></script>
+<script type="text/javascript" src="Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/jquery.final-countdown.js"></script>
+<script type="text/javascript" src="rangeslider.js-2.3.0/rangeslider.min.js"></script>
+
+<script>
+    $('document').ready(function() {
+        'use strict';
+        $('.countdown').final_countdown({
+            start: '1521936000',
+            end: '1524528000',
+            now: Math.floor(Date.now() / 1000)
+        });
+    });
+
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+
+    }
+</script>
 
 <script>
     $('document').ready(function() {
@@ -1120,6 +1196,7 @@
 //
 //    }
 </script>
+
 
 
 </body>
